@@ -1,9 +1,13 @@
 openapi: 3.0.2
 info:
+  license:
+    name: Creative Commons
+    url: https://creativecommons.org/licenses/by/3.0
   title: OctoPrint
-  version: '1.0'
+  description: API client for the OctoPrint 3D printer control server
+  version: "1.0"
 servers:
-  - url: 'http://192.168.178.66:5000/api'
+  - url: "http://192.168.178.66:5000/api"
 paths:
   /login:
     $ref: paths/login.yaml
