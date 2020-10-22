@@ -1,0 +1,8 @@
+get:
+  description: >-
+    Retrieves the current temperature data (actual, target and offset) plus
+    optionally a (limited) history (actual, target, timestamp) for all of the
+    printer’s available tools.
+  responses:
+    '200':
+      description: Current tool state

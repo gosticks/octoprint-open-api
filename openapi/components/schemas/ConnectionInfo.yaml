@@ -1,0 +1,15 @@
+type: object
+properties:
+  current:
+    type: object
+    properties:
+      state:
+        type: string
+      port:
+        type: string
+      baudrate:
+        type: number
+      printerProfile:
+        type: string
+  options:
+    $ref: ./PrinterConnectionOptions.yaml

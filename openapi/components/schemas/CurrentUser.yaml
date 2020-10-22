@@ -1,0 +1,12 @@
+type: object
+properties:
+  name:
+    type: string
+  groups:
+    type: array
+    items:
+      $ref: ./GroupRecord.yaml
+  permissions:
+    type: array
+    items:
+      $ref: ./PermissionRecord.yaml

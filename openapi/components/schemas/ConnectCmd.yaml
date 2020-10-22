@@ -1,0 +1,16 @@
+type: object
+properties:
+  command:
+    type: string
+    enum:
+      - connect
+  port:
+    type: string
+  baudrate:
+    type: number
+  printerProfile:
+    type: string
+  save:
+    type: boolean
+  autoconnect:
+    type: boolean

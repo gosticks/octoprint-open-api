@@ -1,0 +1,9 @@
+description: Retrieves information about the current user.
+get:
+  responses:
+    '200':
+      description: Current user object
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CurrentUser.yaml

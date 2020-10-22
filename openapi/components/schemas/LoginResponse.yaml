@@ -1,0 +1,6 @@
+type: object
+properties:
+  session:
+    type: string
+  _is_external_client:
+    type: boolean

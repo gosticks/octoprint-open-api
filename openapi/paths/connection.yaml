@@ -1,0 +1,30 @@
+get:
+  responses:
+    '200':
+      description: >-
+        Retrieve the current connection settings, including information
+        regarding the available baudrates and serial ports and the current
+        connection state.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ConnectionInfo.yaml
+post:
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          oneOf:
+            - $ref: ../components/schemas/ConnectCmd.yaml
+            - $ref: ../components/schemas/DisconnectCmd.yaml
+            - $ref: ../components/schemas/FakeAckCmd.yaml
+          discriminator:
+            propertyName: command
+  responses:
+    '204':
+      description: success
+    '400':
+      description: >-
+        If the selected port or baudrate for a connect command are not part of
+        the available options.

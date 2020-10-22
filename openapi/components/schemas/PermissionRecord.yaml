@@ -1,0 +1,16 @@
+type: object
+properties:
+  key:
+    type: string
+  name:
+    type: string
+  dangerous:
+    type: boolean
+  default_groups:
+    type: array
+    items:
+      type: string
+  description:
+    type: string
+  needs:
+    $ref: ./Needs.yaml

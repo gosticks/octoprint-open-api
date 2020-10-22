@@ -1,0 +1,18 @@
+post:
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          oneOf:
+            - $ref: ../components/schemas/Login.yaml
+            - $ref: ../components/schemas/PassiveLogin.yaml
+  responses:
+    '200':
+      description: Successful login
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/LoginResponse.yaml
+    '403':
+      description: 'Username/password mismatch, unknown user or deactivated account'

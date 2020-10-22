@@ -1,0 +1,5 @@
+description: Ends the current login session of the current user.
+post:
+  responses:
+    '204':
+      description: User logged out

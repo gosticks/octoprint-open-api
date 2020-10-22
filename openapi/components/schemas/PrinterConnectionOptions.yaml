@@ -1,0 +1,20 @@
+type: object
+properties:
+  ports:
+    type: array
+    items:
+      type: string
+  baudrates:
+    type: array
+    items:
+      type: number
+  printerProfiles:
+    type: array
+    items:
+      $ref: ./PrinterProfile.yaml
+  baudratePreference:
+    type: number
+  printerProfilePreference:
+    type: string
+  autoconnect:
+    type: boolean

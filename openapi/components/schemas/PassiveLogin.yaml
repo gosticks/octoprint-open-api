@@ -1,0 +1,6 @@
+type: object
+properties:
+  passive:
+    type: boolean
+  remember:
+    type: boolean
