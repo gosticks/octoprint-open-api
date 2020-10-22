@@ -1,5 +1,7 @@
 # OctoPrint OpenAPI Definition
 
+This project contains OpenAPI definitions for the popular OctoPrint control library
+
 ## Working on your OpenAPI Definition
 
 ### Install
