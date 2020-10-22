@@ -1,7 +1,10 @@
-description: Retrieves information about the current user.
 get:
+  summary: Current User
+  description: >-
+    Retrieves information about the current user.
+  operationId: getCurrentUser
   responses:
-    '200':
+    "200":
       description: Current user object
       content:
         application/json:

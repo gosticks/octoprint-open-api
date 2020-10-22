@@ -1,5 +1,7 @@
-description: Ends the current login session of the current user.
 post:
+  summary: Logout User
+  description: Ends the current login session of the current user
+  operationId: logout
   responses:
-    '204':
+    "204":
       description: User logged out

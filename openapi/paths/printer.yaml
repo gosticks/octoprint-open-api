@@ -1,4 +1,7 @@
 get:
+  summary: Printer State
+  description: Retrieves the current state of the printer.
+  operationId: getPrinterState
   responses:
-    '200':
-      description: Retrieves the current state of the printer.
+    "200":
+      description: Current Printer state.

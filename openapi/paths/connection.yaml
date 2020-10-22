@@ -1,15 +1,20 @@
 get:
+  summary: Printer Connection
+  operationId: getConnection
+  description: >-
+    Retrieve the current connection settings, including information
+    regarding the available baudrates and serial ports and the current
+    connection state.
   responses:
-    '200':
-      description: >-
-        Retrieve the current connection settings, including information
-        regarding the available baudrates and serial ports and the current
-        connection state.
+    "200":
+      description: Connection info object
       content:
         application/json:
           schema:
             $ref: ../components/schemas/ConnectionInfo.yaml
 post:
+  summary: Change Printer Connection
+  operationId: setConnectionOptions
   requestBody:
     required: true
     content:
@@ -22,9 +27,9 @@ post:
           discriminator:
             propertyName: command
   responses:
-    '204':
-      description: success
-    '400':
+    "204":
+      description: Printer connection settings changed
+    "400":
       description: >-
         If the selected port or baudrate for a connect command are not part of
         the available options.

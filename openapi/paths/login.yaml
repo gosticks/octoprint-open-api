@@ -1,4 +1,10 @@
 post:
+  summary: Login
+  description: >-
+    Creates a login session or retrieves information about the currently existing session (“passive login”).
+    Can be used in one of two ways: to login a user via username and password and create a persistent session (usually from a UI in the browser), or to retrieve information about the active user (from an existing session or an API key) via the passive flag.
+    Will return a 200 OK with a login response on successful login, whether active or passive. The active (username/password) login may also return a 403 Forbidden in case of a username/password mismatch, unknown user or a deactivated account.
+  operationId: login
   requestBody:
     required: true
     content:
@@ -8,11 +14,11 @@ post:
             - $ref: ../components/schemas/Login.yaml
             - $ref: ../components/schemas/PassiveLogin.yaml
   responses:
-    '200':
+    "200":
       description: Successful login
       content:
         application/json:
           schema:
             $ref: ../components/schemas/LoginResponse.yaml
-    '403':
-      description: 'Username/password mismatch, unknown user or deactivated account'
+    "403":
+      description: "Username/password mismatch, unknown user or deactivated account"
