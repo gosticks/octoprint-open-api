@@ -1,0 +1,14 @@
+summary: Retrieve a specific file’s or folder’s information
+operationId: getFileOrFolder
+description: Retrieves the selected file’s or folder’s information.
+parameters:
+  - $ref: ../../../components/parameters/fileLocation.yaml
+  - $ref: ../../../components/parameters/filePath.yaml
+  - $ref: ../../../components/parameters/fileRecursive.yaml
+responses:
+  "200":
+    description: Returns a Retrieve Response
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/files/RetrieveResponse.yaml

@@ -1,0 +1,7 @@
+in: path
+name: path
+description: >-
+  The filename of the file for which to retrieve the information
+schema:
+  type: string
+  format: uri

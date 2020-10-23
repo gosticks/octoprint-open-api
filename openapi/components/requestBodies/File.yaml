@@ -1,0 +1,35 @@
+content:
+  multipart/form-data:
+    schema:
+      type: object
+      properties:
+        file:
+          description: The file to upload, including a valid
+          type: string
+          format: binary
+
+        path:
+          description: >-
+            The path within the location to upload the file to or create the folder in (without the future filename or foldername - basically the parent folder). If unset will be taken from the provided file’s name or foldername and default to the root folder of the location.
+          type: string
+          format: uri
+
+        select:
+          type: boolean
+          description: >-
+            Whether to select the file directly after upload (true) or not (false). Optional, defaults to false. Ignored when creating a folder.
+
+        print:
+          type: boolean
+          description: >-
+            Whether to start printing the file directly after upload (true) or not (false). If set, select is implicitly true as well. Optional, defaults to false. Ignored when creating a folder.
+
+        userdata:
+          type: string
+          description: >-
+            An optional string that if specified will be interpreted as JSON and then saved along with the file as metadata (metadata key userdata). Ignored when creating a folder.
+
+        foldername:
+          type: string
+          description: >-
+            The name of the folder to create. Ignored when uploading a file.

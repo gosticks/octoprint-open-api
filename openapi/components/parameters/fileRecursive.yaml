@@ -1,0 +1,6 @@
+in: query
+name: recursive
+description: If set to true, return all files and folders recursively. Otherwise only return items on same level.
+required: false
+schema:
+  type: boolean

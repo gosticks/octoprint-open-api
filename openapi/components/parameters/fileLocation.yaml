@@ -1,0 +1,9 @@
+in: path
+name: location
+description: >-
+  Retrieve information regarding the files currently available on the selected location and – if targeting the local location – regarding the disk space still available locally in the system.
+schema:
+  type: string
+  enum:
+    - local
+    - sdcard

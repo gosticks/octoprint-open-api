@@ -21,13 +21,16 @@ paths:
     $ref: paths/connection.yaml
   /printer:
     $ref: paths/printer.yaml
-  /files/local:
-    $ref: paths/files/local-post.yaml
-  /files/sdcard:
-    $ref: paths/files/sdcard-post.yaml
   /files/{location}:
-    $ref: paths/files/{location}-get.yaml
+    get:
+      $ref: paths/files/{location}/get.yaml
+    post:
+      $ref: ./paths/files/{location}/post.yaml
+  "/files/{location}/{path}":
+    get:
+      $ref: ./paths/files/{location}/{path}-get.yaml
   /files:
-    $ref: paths/files/get.yaml
+    get:
+      $ref: paths/files/get.yaml
   /printer/tool:
     $ref: paths/printer@tool.yaml
