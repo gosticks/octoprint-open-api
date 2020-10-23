@@ -1,0 +1,10 @@
+type: object
+properties:
+  files:
+    type: array
+    items:
+      $ref: ./File.yaml
+  free:
+    description: >-
+      Remaining free space
+    type: string

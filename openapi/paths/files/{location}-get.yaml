@@ -1,10 +1,20 @@
 get:
-  summary: Retrieve all files
-  operationId: getAllFiles
+  summary: Retrieve files from specific location
+  operationId: getAllFilesInLocation
   description: >-
     Retrieve information regarding all files currently available and regarding the disk space still available locally in the system.
     By default only returns the files and folders in the root directory. If the query parameter `recursive` is provided and set to `true`, returns all files and folders.
   parameters:
+    - in: path
+      name: location
+      required: false
+      description: >-
+        Retrieve information regarding the files currently available on the selected location and – if targeting the local location – regarding the disk space still available locally in the system.
+      schema:
+        type: string
+        enum:
+          - local
+          - sdcard
     - in: query
       name: recursive
       description: If set to true, return all files and folders recursively. Otherwise only return items on same level.
@@ -13,7 +23,7 @@ get:
         type: string
   responses:
     "200":
-      description: Returns a Retrieve response
+      description: Returns a Retrieve Response
       content:
         application/json:
           schema:

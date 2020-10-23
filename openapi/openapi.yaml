@@ -22,9 +22,11 @@ paths:
   /printer:
     $ref: paths/printer.yaml
   /files/local:
-    $ref: paths/files/local.yaml
+    $ref: paths/files/local-post.yaml
   /files/sdcard:
-    $ref: paths/files/sdcard.yaml
+    $ref: paths/files/sdcard-post.yaml
+  /files/{location}:
+    $ref: paths/files/{location}-get.yaml
   /files:
     $ref: paths/files/get.yaml
   /printer/tool:
