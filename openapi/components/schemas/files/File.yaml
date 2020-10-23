@@ -1,0 +1,21 @@
+type: object
+required:
+  - origin
+properties:
+  origin:
+    type: string
+    description: The size of the file in bytes. Only available for local files or sdcard files if the printer supports file sizes for sd card files.
+    enum:
+      - local
+      - sdcard
+  hash:
+    type: string
+  size:
+    type: number
+  date:
+    type: number
+    format: date-time
+  refs:
+    $ref: ./Reference.yaml
+  gcodeAnalysis:
+    $ref: ./GCodeAnalysis.yaml

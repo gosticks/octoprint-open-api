@@ -1,0 +1,16 @@
+get:
+  summary: Retrieve all files
+  operationId: getAllFiles
+  description: >-
+    Retrieve information regarding all files currently available and regarding the disk space still available locally in the system.
+    By default only returns the files and folders in the root directory. If the query parameter `recursive` is provided and set to `true`, returns all files and folders.
+  parameters:
+    - in: query
+      name: recursive
+      description: If set to true, return all files and folders recursively. Otherwise only return items on same level.
+      required: false
+      schema:
+        type: string
+  responses:
+    "200":
+      description: Returns a Retrieve response

@@ -1,0 +1,55 @@
+type: object
+description: The estimated usage of filament
+properties:
+  length:
+    type: number
+    description: >-
+      The length of filament used, in mm
+  volume:
+    type: number
+    description: >-
+      The volume of filament used, in cm³
+  dimensions:
+    type: object
+    description: >-
+      Information regarding the size of the printed model
+    properties:
+      depth:
+        type: number
+        description: >-
+          The depth of the printed model, in mm
+      height:
+        type: number
+        description: >-
+          The height of the printed model, in mm
+      width:
+        type: number
+        description: >-
+          The width of the printed model, in mm
+  printingArea:
+    type: object
+    properties:
+      maxX:
+        type: number
+        description: >-
+          The maximum X coordinate of the printed model, in mm
+      maxY:
+        type: number
+        description: >-
+          The maximum Y coordinate of the printed model, in mm
+      maxZ:
+        type: number
+        description: >-
+          The maximum Z coordinate of the printed model, in mm
+      minX:
+        type: number
+        description: >-
+          The minimum X coordinate of the printed model, in mm
+      minY:
+        type: number
+        description: >-
+          The minimum Y coordinate of the printed model, in mm
+      minZ:
+        type: number
+        description: >-
+          The minimum Z coordinate of the printed model, in mm

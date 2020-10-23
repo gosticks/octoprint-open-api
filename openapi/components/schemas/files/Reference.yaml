@@ -1,0 +1,13 @@
+type: object
+properties:
+  resource:
+    type: string
+    format: url
+  download:
+    type: string
+    format: url
+  model:
+    type: string
+    format: url
+required:
+  - resource

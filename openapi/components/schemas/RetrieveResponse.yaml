@@ -1,0 +1,4 @@
+type: object
+properties:
+  files:
+    type: s

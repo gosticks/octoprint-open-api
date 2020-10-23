@@ -1,0 +1,58 @@
+post:
+  summary: Upload file or create folder
+  operationId: uploadToLocal
+  description: Upload a file to the selected location or create a new empty folder on it.
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          type: object
+          properties:
+            file:
+              description: The file to upload, including a valid
+              type: string
+              format: binary
+
+            path:
+              description: >-
+                The path within the location to upload the file to or create the folder in (without the future filename or foldername - basically the parent folder). If unset will be taken from the provided file’s name or foldername and default to the root folder of the location.
+              type: string
+              format: uri
+
+            select:
+              type: boolean
+              description: >-
+                Whether to select the file directly after upload (true) or not (false). Optional, defaults to false. Ignored when creating a folder.
+
+            print:
+              type: boolean
+              description: >-
+                Whether to start printing the file directly after upload (true) or not (false). If set, select is implicitly true as well. Optional, defaults to false. Ignored when creating a folder.
+
+            userdata:
+              type: string
+              description: >-
+                An optional string that if specified will be interpreted as JSON and then saved along with the file as metadata (metadata key userdata). Ignored when creating a folder.
+
+            foldername:
+              type: string
+              description: >-
+                The name of the folder to create. Ignored when uploading a file.
+  responses:
+    "201":
+      description: Created
+    "400":
+      description: >-
+        If no file or foldername are included in the request, userdata was provided but could not be parsed as JSON or the request is otherwise invalid.
+    "404":
+      description: >-
+        If location is neither local nor sdcard or trying to upload to SD card and SD card support is disabled
+    "409":
+      description: >-
+        If the upload of the file would override the file that is currently being printed or if an upload to SD card was requested and the printer is either not operational or currently busy with a print job.
+    "415":
+      description: >-
+        If the file is neither a gcode nor an stl file (or it is an stl file but slicing support is disabled)
+    "500":
+      description: >-
+        If the upload failed internally

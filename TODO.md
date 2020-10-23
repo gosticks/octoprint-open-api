@@ -12,9 +12,9 @@
 - [x] Version
 - [x] Connection Handling
 - [ ] File Operations [link](https://docs.octoprint.org/en/master/api/files.html)
-  - [ ] Retrieve all files
+  - [x] Retrieve all files
   - [ ] Retrieve files from specific location
-  - [ ] Upload file or create folder
+  - [x] Upload file or create folder
   - [ ] Retrieve a specific file’s or folder’s information
   - [ ] Issue a file command
   - [ ] Delete file

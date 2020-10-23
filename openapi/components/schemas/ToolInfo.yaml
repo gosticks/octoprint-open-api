@@ -1,1 +1,30 @@
 type: object
+properties:
+  length:
+    type: number
+  volume:
+    type: number
+  dimensions:
+    type: object
+    properties:
+      depth:
+        type: number
+      height:
+        type: number
+      width:
+        type: number
+  printingArea:
+    type: object
+    properties:
+      maxX:
+        type: number
+      maxY:
+        type: number
+      maxZ:
+        type: number
+      minX:
+        type: number
+      minY:
+        type: number
+      minZ:
+        type: number
