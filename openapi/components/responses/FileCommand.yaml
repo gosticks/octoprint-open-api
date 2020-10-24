@@ -1,0 +1,28 @@
+"200":
+  description: No error for a select command.
+"201":
+  content:
+    application/json:
+      schema:
+        $ref: ../schemas/files/File.yaml
+  description: >-
+    No error for copy command.
+"202":
+  content:
+    application/json:
+      schema:
+        $ref: ../schemas/files/File.yaml
+  description: >-
+    No error for a slice command.
+"400":
+  description: >-
+    If the command is unknown or the request is otherwise invalid
+"404":
+  description: >-
+    If location is neither local nor sdcard or the requested file was not found
+"409":
+  description: >-
+    If a selected file is supposed to start printing directly but the printer is not operational or if a file is to be selected but the printer is already printing or if a file to be sliced is supposed to be selected or start printing directly but the printer is not operational or already printing.
+"415":
+  description: >-
+    If a slice command was issued against something other than an STL file.

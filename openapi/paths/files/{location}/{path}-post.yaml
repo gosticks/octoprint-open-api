@@ -1,0 +1,14 @@
+summary: Issue a file command
+operationId: sendFileCommand
+description: Issue a file command to an existing file.
+parameters:
+  - $ref: ../../../components/parameters/fileLocation.yaml
+  - $ref: ../../../components/parameters/filePath.yaml
+  - $ref: ../../../components/parameters/fileRecursive.yaml
+responses:
+  "200":
+    description: Returns a Retrieve Response
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/files/RetrieveResponse.yaml

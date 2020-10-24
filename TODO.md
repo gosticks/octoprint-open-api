@@ -11,14 +11,14 @@
 - [x] Current User
 - [x] Version
 - [x] Connection Handling
-- [ ] File Operations [link](https://docs.octoprint.org/en/master/api/files.html)
+- [x] File Operations [link](https://docs.octoprint.org/en/master/api/files.html)
   - [x] Retrieve all files
   - [x] Retrieve files from specific location
   - [x] Upload file or create folder
   - [x] Retrieve a specific file’s or folder’s information
-  - [ ] Issue a file command
+  - [x] Issue a file command
   - [x] Delete file
-  - [ ] Model: Upload response
+  - [x] Model: Upload response
   - [x] Model: Retrieve response
 - [ ] Job operations [link](https://docs.octoprint.org/en/master/api/job.html)
   - [ ] Issue a job command

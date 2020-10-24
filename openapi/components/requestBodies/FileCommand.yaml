@@ -1,0 +1,77 @@
+content:
+  application/json:
+    schema:
+      oneOf:
+        - type: object
+          description: Selects a file for printing
+          properties:
+            command:
+              type: string
+              enum:
+                - select
+            print:
+              description: >-
+                Optional, if set to true the file will start printing directly after selection. If the printer is not operational when this parameter is present and set to true, the request will fail with a response of 409 Conflict.
+              type: boolean
+        - type: object
+          description: >-
+            Slices an STL file into GCODE. Note that this is an asynchronous operation that will take place in the background after the response has been sent back to the client.
+          properties:
+            command:
+              type: string
+              enum:
+                - slice
+            slice:
+              description: >-
+                The slicing engine to use, defaults to cura if not set, which is also the only supported slicer right now.
+              type: string
+            gcode:
+              description: >-
+                Name of the GCODE file to generated, in the same location as the STL file. Defaults to the STL file name with extension .gco if not set.
+              type: string
+            position:
+              description: >-
+                Position of the object-to-slice’s center on the print bed. A dictionary containing both x and y coordinate in mm is expected
+              $ref: ../schemas/Position.yaml
+            printerProfile:
+              description: >-
+                Name of the printer profile to use, if not set the default printer profile will be used.
+              type: string
+            profile:
+              oneOf:
+                - type: string
+                - type: object
+            select:
+              type: boolean
+              description: >-
+                Optional, if set to true the file be selected for printing right after the slicing has finished. If the printer is not operational or already printing when this parameter is present and set to true, the request will fail with a response of 409 Conflict
+            print:
+              type: boolean
+              description: >-
+                Optional, if set to true the file be selected and start printing right after the slicing has finished. If the printer is not operational or already printing when this parameter is present and set to true, the request will fail with a response of 409 Conflict. Note that if this parameter is set, the parameter select does not need to be set, it is automatically assumed to be true too, otherwise no printing would be possible.
+        - type: object
+          description: >-
+            Copies the file or folder to a new destination on the same location
+          properties:
+            command:
+              type: string
+              enum:
+                - copy
+            destination:
+              type: string
+              format: uri
+              description: >-
+                The path of the parent folder to which to copy the file or folder. It must already exist.
+        - type: object
+          description: >-
+            Moves the file or folder to a new destination on the same location
+          properties:
+            command:
+              type: string
+              enum:
+                - move
+            destination:
+              type: string
+              format: uri
+              description: >-
+                The path of the parent folder to which to copy the file or folder. It must already exist.
