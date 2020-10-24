@@ -20,10 +20,10 @@
   - [x] Delete file
   - [x] Model: Upload response
   - [x] Model: Retrieve response
-- [ ] Job operations [link](https://docs.octoprint.org/en/master/api/job.html)
-  - [ ] Issue a job command
-  - [ ] Retrieve information about the current job
-  - [ ] Model: Job information response
+- [x] Job operations [link](https://docs.octoprint.org/en/master/api/job.html)
+  - [x] Issue a job command
+  - [x] Retrieve information about the current job
+  - [x] Model: Job information response
 - [ ] Languages [link](https://docs.octoprint.org/en/master/api/languages.html)
   - [ ] Retrieve installed language packs
   - [ ] Upload a language pack

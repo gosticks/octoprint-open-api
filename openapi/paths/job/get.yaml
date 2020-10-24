@@ -1,0 +1,29 @@
+summary: Retrieve information about the current job
+operationId: getCurrentJob
+description: Retrieve information about the current job (if there is one).
+requestBody:
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          job:
+            $ref: ../../components/schemas/job/JobInfo.yaml
+          progress:
+            $ref: ../../components/schemas/job/ProgressInfo.yaml
+          state:
+            type: string
+            enum:
+              - Operational
+              - Printing
+              - Pausing
+              - Paused
+              - Cancelling
+              - Error
+              - Offline
+        description: >-
+          A textual representation of the current state of the job, i.e. “Operational”, “Printing”, “Pausing”, “Paused”, “Cancelling”, “Error” or “Offline”.
+responses:
+  "200":
+    description: >-
+      No error

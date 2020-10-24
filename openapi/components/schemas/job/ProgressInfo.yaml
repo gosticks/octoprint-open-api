@@ -1,0 +1,35 @@
+type: object
+properties:
+  completion:
+    type: number
+    description: >-
+      Percentage of completion of the current print job
+  filepos:
+    type: number
+    description: >-
+      Current position in the file being printed, in bytes from the beginning
+  printTime:
+    type: number
+    description: >-
+      Time already spent printing, in seconds
+  printTimeLeft:
+    type: number
+    description: >-
+      Estimate of time left to print, in seconds
+  printTimeLeftOrigin:
+    type: string
+    enum:
+      - linear
+      - analysis
+      - estimate
+      - average
+      - mixed-analysis
+      - mixed-average
+    description: >-
+      Origin of the current time left estimate.
+      - linear: based on an linear approximation of the progress in file in bytes vs time
+      - analysis: based on an analysis of the file
+      - estimate: calculated estimate after stabilization of linear estimation
+      - average: based on the average total from past prints of the same model against the same printer profile
+      - mixed-analysis: mixture of estimate and analysis
+      - mixed-average: mixture of estimate and average

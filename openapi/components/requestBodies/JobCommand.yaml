@@ -1,0 +1,44 @@
+content:
+  application/json:
+    schema:
+      oneOf:
+        - type: object
+          description: >-
+            Starts the print of the currently selected file.
+          properties:
+            command:
+              type: string
+              enum:
+                - start
+        - type: object
+          description: >-
+            Cancels the current print job. If no print job is active (either paused or printing), a 409 Conflict will be returned.
+          properties:
+            command:
+              type: string
+              enum:
+                - cancel
+
+        - type: object
+          description: >-
+            Restart the print of the currently selected file from the beginning. There must be an active print job for this to work and the print job must currently be paused. If either is not the case, a 409 Conflict will be returned.
+          properties:
+            command:
+              type: string
+              enum:
+                - restart
+
+        - type: object
+          description: >-
+            Pauses/resumes/toggles the current print job. Accepts one optional additional parameter action specifying which action to take.
+          properties:
+            command:
+              type: string
+              enum:
+                - restart
+            action:
+              type: string
+              enum:
+                - pause
+                - resume
+                - toggle

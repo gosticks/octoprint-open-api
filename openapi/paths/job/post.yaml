@@ -1,0 +1,14 @@
+summary: Issue a job command
+operationId: sendJobCommand
+description: >-
+  Job commands allow starting, pausing and cancelling print jobs.
+requestBody:
+  $ref: ../../components/requestBodies/JobCommand.yaml
+responses:
+  "204":
+    description: >-
+      No error
+  "409":
+    description: >-
+      If the printer is not operational or the current print job state does not 
+      match the preconditions for the command.

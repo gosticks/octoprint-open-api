@@ -1,0 +1,16 @@
+type: object
+properties:
+  file:
+    description: >-
+      The file that is the target of the current print job
+    $ref: ../files/File.yaml
+  estimatedPrintTime:
+    description: >-
+      The estimated print time for the file, in seconds.
+    type: number
+  lastPrintTime:
+    description: >-
+      The print time of the last print of the file, in seconds.
+    type: number
+  filament:
+    $ref: ../Filament.yaml

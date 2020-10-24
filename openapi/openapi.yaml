@@ -34,5 +34,10 @@ paths:
   /files:
     get:
       $ref: paths/files/get.yaml
+  /job:
+    get:
+      $ref: paths/job/get.yaml
+    post:
+      $ref: paths/job/post.yaml
   /printer/tool:
     $ref: paths/printer@tool.yaml

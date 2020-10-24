@@ -1,0 +1,10 @@
+type: object
+description: >-
+  Information regarding the estimated filament usage of the print job
+properties:
+  length:
+    description: Length of filament used, in mm
+    type: number
+  volume:
+    description: Volume of filament used, in cm³
+    type: number
