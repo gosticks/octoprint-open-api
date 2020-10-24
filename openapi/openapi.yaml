@@ -26,9 +26,11 @@ paths:
       $ref: paths/files/{location}/get.yaml
     post:
       $ref: ./paths/files/{location}/post.yaml
-  "/files/{location}/{path}":
+  /files/{location}/{path}:
     get:
       $ref: ./paths/files/{location}/{path}-get.yaml
+    delete:
+      $ref: ./paths/files/{location}/{path}-delete.yaml
   /files:
     get:
       $ref: paths/files/get.yaml

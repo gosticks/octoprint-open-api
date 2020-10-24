@@ -13,13 +13,13 @@
 - [x] Connection Handling
 - [ ] File Operations [link](https://docs.octoprint.org/en/master/api/files.html)
   - [x] Retrieve all files
-  - [ ] Retrieve files from specific location
+  - [x] Retrieve files from specific location
   - [x] Upload file or create folder
-  - [ ] Retrieve a specific file’s or folder’s information
+  - [x] Retrieve a specific file’s or folder’s information
   - [ ] Issue a file command
-  - [ ] Delete file
+  - [x] Delete file
   - [ ] Model: Upload response
-  - [ ] Model: Retrieve response
+  - [x] Model: Retrieve response
 - [ ] Job operations [link](https://docs.octoprint.org/en/master/api/job.html)
   - [ ] Issue a job command
   - [ ] Retrieve information about the current job

@@ -1,5 +1,9 @@
 "201":
   description: Created
+  content:
+    application/json:
+      schema:
+        $ref: ../schemas/files/UploadResponse.yaml
 "400":
   description: >-
     If no file or foldername are included in the request, userdata was provided but could not be parsed as JSON or the request is otherwise invalid.

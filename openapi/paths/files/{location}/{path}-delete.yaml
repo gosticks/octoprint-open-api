@@ -4,3 +4,10 @@ description: Delete the selected path on the selected location.
 parameters:
   - $ref: ../../../components/parameters/fileLocation.yaml
   - $ref: ../../../components/parameters/filePath.yaml
+responses:
+  "204":
+    description: File deleted
+  "404":
+    description: If location is neither local nor sdcard or the requested file was not found
+  "409":
+    description: If the file to be deleted is currently being printed
