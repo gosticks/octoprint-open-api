@@ -19,8 +19,7 @@ paths:
     $ref: paths/version.yaml
   /connection:
     $ref: paths/connection.yaml
-  /printer:
-    $ref: paths/printer.yaml
+
   /files/{location}:
     get:
       $ref: paths/files/{location}/get.yaml
@@ -39,5 +38,8 @@ paths:
       $ref: paths/job/get.yaml
     post:
       $ref: paths/job/post.yaml
+  /printer:
+    get:
+      $ref: paths/printer/get.yaml
   /printer/tool:
     $ref: paths/printer@tool.yaml

@@ -38,7 +38,7 @@
   - [ ] Model: File information
   - [ ] Model: References
 - [ ] Printer operations [link](https://docs.octoprint.org/en/master/api/printer.html)
-  - [ ] Retrieve the current printer state
+  - [x] Retrieve the current printer state
   - [ ] Issue a print head command
   - [ ] Issue a tool command
   - [ ] Retrieve the current tool state
