@@ -1,6 +1,8 @@
 content:
   application/json:
     schema:
+      discriminator:
+        propertyName: command
       oneOf:
         - type: object
           description: >-

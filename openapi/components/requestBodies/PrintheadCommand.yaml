@@ -1,0 +1,66 @@
+content:
+  application/json:
+    schema:
+      discriminator:
+        propertyName: command
+      oneOf:
+        - type: object
+          description: >-
+            Jogs the print head (relatively) by a defined amount in one or more axes.
+          properties:
+            command:
+              type: string
+              enum:
+                - axis
+            x:
+              type: number
+              description: >-
+                Optional. Amount/coordinate to jog print head on x axis, must be a valid number corresponding to the distance to travel in mm.
+            y:
+              type: number
+              description: >-
+                Optional. Amount/coordinate to jog print head on y axis, must be a valid number corresponding to the distance to travel in mm.
+            z:
+              type: number
+              description: Optional. Amount/coordinate to jog print head on z axis, must be a valid number corresponding to the distance to travel in mm.
+            absolute:
+              type: number
+              description: >-
+                Optional. Boolean value specifying whether to move relative to current position (provided axes values are relative amounts) or to absolute position (provided axes values are coordinates)
+            speed:
+              type: number
+              description: >-
+                Optional. Speed at which to move. If not provided, minimum speed for all selected axes from printer profile will be used. If provided but false, no speed parameter will be appended to the command. Otherwise interpreted as an integer signifying the speed in mm/min, to append to the command.
+        - type: object
+          description: >-
+            Homes the print head in all of the given axes.
+          properties:
+            command:
+              type: string
+              enum:
+                - home
+            axis:
+              type: array
+              items:
+                type: string
+                enum:
+                  - x
+                  - y
+                  - z
+        - type: object
+          description: >-
+            Changes the feedrate factor to apply to the movements of the axes.
+          properties:
+            command:
+              type: string
+              enum:
+                - feedrate
+            factor:
+              oneOf:
+                - type: number
+                  format: float
+                  minimum: 0.5
+                  maximum: 2.0
+                - type: integer
+                  minimum: 50
+                  maximum: 200

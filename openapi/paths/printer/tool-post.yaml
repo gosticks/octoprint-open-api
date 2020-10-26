@@ -1,0 +1,16 @@
+summary: Issue a tool command
+operationId: sendToolCmd
+description: >-
+  Tool commands allow setting the temperature and temperature offsets for the printer’s tools (hotends), selecting the current tool and extruding/retracting from the currently selected tool.
+requestBody:
+  $ref: ../../components/requestBodies/PrinterToolCommand.yaml
+responses:
+  "204":
+    description: >-
+      No Error
+  "400":
+    description: >-
+      If targets or offsets contains a property or tool contains a value not matching the format tool{n}, the target/offset temperature, extrusion amount or flow rate factor is not a valid number or outside of the supported range, or if the request is otherwise invalid.
+  "409":
+    description: >-
+      If the printer is not operational or – in case of select or extrude – currently printing.

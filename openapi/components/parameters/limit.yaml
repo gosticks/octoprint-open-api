@@ -1,0 +1,6 @@
+in: query
+name: limit
+schema:
+  type: integer
+description: >-
+  If set to an integer (n), only the last n data points from the history will be returned. Will be ignored if history is not enabled.

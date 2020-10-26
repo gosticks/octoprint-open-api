@@ -1,0 +1,79 @@
+content:
+  application/json:
+    schema:
+      discriminator:
+        propertyName: command
+      oneOf:
+        - type: object
+          description: >-
+            Sets the given target temperature on the printer’s tools.
+          properties:
+            command:
+              type: string
+              enum:
+                - target
+            targets:
+              type: object
+              description: >-
+                Target temperature(s) to set, properties must match the format tool{n} with n being the tool’s index starting with 0. A value of 0 will turn the heater off.
+        - type: object
+          description: >-
+            Sets the given temperature offset on the printer’s tools.
+          properties:
+            command:
+              type: string
+              enum:
+                - offset
+            offsets:
+              type: object
+              description: >-
+                Offset(s) to set, properties must match the format tool{n} with n being the tool’s index starting with 0.
+        - type: object
+          description: >-
+            Selects the printer’s current tool.
+          properties:
+            command:
+              type: string
+              enum:
+                - select
+            tool:
+              description: >-
+                Tool to select, format tool{n} with n being the tool’s index starting with 0.
+              type: string
+        - type: object
+          description: >-
+            Extrudes the given amount of filament from the currently selected tool.
+          required:
+            - command
+            - amount
+          properties:
+            command:
+              type: string
+              enum:
+                - extrude
+            amount:
+              description: >-
+                The amount of filament to extrude in mm. May be negative to retract.
+              type: number
+            speed:
+              description: >-
+                Optional. Speed at which to extrude. If not provided, maximum speed for E axis from printer profile will be used. Otherwise interpreted as an integer signifying the speed in mm/min, to append to the command.
+              type: number
+        - type: object
+          description: >-
+            Changes the flow rate factor to apply to extrusion of the tool.
+          properties:
+            command:
+              type: string
+              enum:
+                - flowrate
+            factor:
+              description: >-
+                The new factor, percentage between 75 and 125% as integer (75 to 125) or float (0.75 to 1.25).
+              oneOf:
+                - type: integer
+                  minimum: 75
+                  maximum: 125
+                - type: number
+                  minimum: 0.75
+                  maximum: 1.25

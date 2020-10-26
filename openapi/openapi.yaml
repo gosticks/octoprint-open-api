@@ -42,4 +42,7 @@ paths:
     get:
       $ref: paths/printer/get.yaml
   /printer/tool:
-    $ref: paths/printer@tool.yaml
+    get:
+      $ref: paths/printer/tool-get.yaml
+    post:
+      $ref: paths/printer/tool-post.yaml

@@ -2,33 +2,20 @@ summary: Printer State
 description: Retrieves the current state of the printer.
 operationId: getPrinterState
 parameters:
+  - $ref: ../../components/parameters/history.yaml
+  - $ref: ../../components/parameters/limit.yaml
   - in: query
     name: exclude
     schema:
-      type: string
-      enum:
-        - temperature
-        - sd
-        - state
+      type: array
+      items:
+        type: string
+        enum:
+          - temperature
+          - sd
+          - state
     description: >-
       An optional comma-separated list of fields to exclude from the response (e.g. if not needed by the client). Valid values to supply here are temperature, sd and state.
-  - in: query
-    name: history
-    schema:
-      type: string
-      enum:
-        - yes
-        - y
-        - "1"
-    description: >-
-      If set to true (or: yes, y, 1), history information will be included in the response too. If no limit parameter is given, all available temperature history data will be returned.
-  - in: query
-    name: limit
-    schema:
-      type: integer
-    description: >-
-      If set to an integer (n), only the last n data points from the printer’s temperature history will be returned. Will be ignored if history is not enabled.
-
 responses:
   "200":
     description: Current Printer state.

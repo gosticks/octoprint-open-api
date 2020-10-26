@@ -1,0 +1,24 @@
+"200":
+  description: Current tool status with optional history
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          history:
+            type: array
+            items:
+              type: object
+              properties:
+                time:
+                  type: integer
+              additionalProperties:
+                $ref: ../schemas/printer/Tool.yaml
+              example:
+                tool1:
+                  actual: 250
+                tool2:
+                  actual: 200
+                  target: 215
+        additionalProperties:
+          $ref: ../schemas/printer/Tool.yaml

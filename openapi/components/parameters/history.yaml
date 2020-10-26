@@ -1,0 +1,10 @@
+in: query
+name: history
+schema:
+  type: string
+  enum:
+    - yes
+    - y
+    - "1"
+description: >-
+  If set to true (or: yes, y, 1), history information will be included in the response too. If no limit parameter is given, all available temperature history data will be returned.

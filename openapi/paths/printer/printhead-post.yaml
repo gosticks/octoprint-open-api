@@ -1,0 +1,16 @@
+summary: Issue a print head command
+operationId: sendPrintheadCommand
+description: >-
+  Print head commands allow jogging and homing the print head in all three axes.
+requestBody:
+  $ref: ../../components/requestBodies/PrintheadCommand.yaml
+responses:
+  "204":
+    description: >-
+      No Error
+  "400":
+    description: >-
+      If targets or offsets contains a property or tool contains a value not matching the format tool{n}, the target/offset temperature, extrusion amount or flow rate factor is not a valid number or outside of the supported range, or if the request is otherwise invalid.
+  "409":
+    description: >-
+      If the printer is not operational or – in case of select or extrude – currently printing.

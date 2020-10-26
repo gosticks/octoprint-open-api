@@ -39,7 +39,7 @@
   - [ ] Model: References
 - [ ] Printer operations [link](https://docs.octoprint.org/en/master/api/printer.html)
   - [x] Retrieve the current printer state
-  - [ ] Issue a print head command
+  - [x] Issue a print head command
   - [ ] Issue a tool command
   - [ ] Retrieve the current tool state
   - [ ] Issue a bed command
