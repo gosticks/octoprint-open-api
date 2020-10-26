@@ -40,8 +40,8 @@
 - [ ] Printer operations [link](https://docs.octoprint.org/en/master/api/printer.html)
   - [x] Retrieve the current printer state
   - [x] Issue a print head command
-  - [ ] Issue a tool command
-  - [ ] Retrieve the current tool state
+  - [x] Issue a tool command
+  - [x] Retrieve the current tool state
   - [ ] Issue a bed command
   - [ ] Retrieve the current bed state
   - [ ] Issue a chamber command
