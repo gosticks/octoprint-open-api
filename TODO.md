@@ -42,10 +42,10 @@
   - [x] Issue a print head command
   - [x] Issue a tool command
   - [x] Retrieve the current tool state
-  - [ ] Issue a bed command
-  - [ ] Retrieve the current bed state
-  - [ ] Issue a chamber command
-  - [ ] Retrieve the current chamber state
+  - [x] Issue a bed command
+  - [x] Retrieve the current bed state
+  - [x] Issue a chamber command
+  - [x] Retrieve the current chamber state
   - [ ] Issue an SD command
   - [ ] Retrieve the current SD state
   - [ ] Send an arbitrary command to the printer
