@@ -13,7 +13,7 @@
                 time:
                   type: integer
               additionalProperties:
-                $ref: ../schemas/printer/Tool.yaml
+                $ref: ../schemas/printer/TemperatureProbe.yaml
               example:
                 tool1:
                   actual: 250
@@ -21,4 +21,7 @@
                   actual: 200
                   target: 215
         additionalProperties:
-          $ref: ../schemas/printer/Tool.yaml
+          $ref: ../schemas/printer/TemperatureProbe.yaml
+"409":
+  description: >-
+    If the printer is not operational.

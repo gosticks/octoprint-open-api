@@ -1,0 +1,16 @@
+summary: Issue a bed command
+operationId: sendChamberCmd
+description: >-
+  Chamber commands allow setting the temperature and temperature offsets for the printer’s heated chamber.
+requestBody:
+  $ref: ../../components/requestBodies/PrinterChamberCommand.yaml
+responses:
+  "204":
+    description: >-
+      No Error
+  "400":
+    description: >-
+      If target or offset is not a valid number or outside of the supported range, or if the request is otherwise invalid.
+  "409":
+    description: >-
+      If the printer is not operational or the selected printer profile does not have a heated chamber.

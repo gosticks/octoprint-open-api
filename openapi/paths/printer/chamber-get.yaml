@@ -1,0 +1,11 @@
+summary: Retrieve the current chamber state
+operationId: getChamberState
+description: >-
+  Retrieves the current temperature data (actual, target and offset) plus optionally a (limited) history (actual, target, timestamp) for the printer’s heated chamber.
+
+  It’s also possible to retrieve the temperature history by supplying the history query parameter set to true. The amount of returned history data points can be limited using the limit query parameter.
+parameters:
+  - $ref: ../../components/parameters/history.yaml
+  - $ref: ../../components/parameters/limit.yaml
+responses:
+  $ref: ../../components/responses/ChamberState.yaml

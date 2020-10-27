@@ -1,0 +1,30 @@
+content:
+  application/json:
+    schema:
+      discriminator:
+        propertyName: command
+      oneOf:
+        - type: object
+          description: >-
+            Sets the given target temperature on the printer’s bed.
+          properties:
+            command:
+              type: string
+              enum:
+                - target
+            target:
+              type: number
+              description: >-
+                Target temperature to set. A value of 0 will turn the heater off.
+        - type: object
+          description: >-
+            Sets the given temperature offset on the printer’s bed.
+          properties:
+            command:
+              type: string
+              enum:
+                - offset
+            offset:
+              type: number
+              description: >-
+                Offset to set.

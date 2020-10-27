@@ -46,14 +46,14 @@
   - [x] Retrieve the current bed state
   - [x] Issue a chamber command
   - [x] Retrieve the current chamber state
-  - [ ] Issue an SD command
-  - [ ] Retrieve the current SD state
-  - [ ] Send an arbitrary command to the printer
+  - [x] Issue an SD command
+  - [x] Retrieve the current SD state
+  - [x] Send an arbitrary command to the printer
   - [ ] Retrieve custom controls
-  - [ ] Model: Full State Response
-  - [ ] Model: Temperature State
-  - [ ] Model: SD State
-  - [ ] Model: Arbitrary Command Request
+  - [x] Model: Full State Response
+  - [x] Model: Temperature State
+  - [x] Model: SD State
+  - [x] Model: Arbitrary Command Request
   - [ ] Model: Custom Controls Response
 - [ ] Printer profile operations [link](https://docs.octoprint.org/en/master/api/printerprofiles.html)
   - [ ] Retrieve all printer profiles

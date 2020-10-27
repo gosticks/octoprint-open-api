@@ -6,4 +6,4 @@ parameters:
   - $ref: ../../components/parameters/history.yaml
   - $ref: ../../components/parameters/limit.yaml
 responses:
-  $ref: ../../components/responses/ToolStatus.yaml
+  $ref: ../../components/responses/ToolState.yaml

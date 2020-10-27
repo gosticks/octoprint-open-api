@@ -1,0 +1,16 @@
+summary: Issue a bed command
+operationId: sendBedCmd
+description: >-
+  Bed commands allow setting the temperature and temperature offsets for the printer’s heated bed.
+requestBody:
+  $ref: ../../components/requestBodies/PrinterBedCommand.yaml
+responses:
+  "204":
+    description: >-
+      No Error
+  "400":
+    description: >-
+      If target or offset is not a valid number or outside of the supported range, or if the request is otherwise invalid.
+  "409":
+    description: >-
+      If the printer is not operational or the selected printer profile does not have a heated bed.

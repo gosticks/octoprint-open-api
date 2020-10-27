@@ -1,0 +1,26 @@
+"200":
+  description: Current chamber status with optional history
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          chamber:
+            $ref: ../schemas/printer/TemperatureProbe.yaml
+          history:
+            type: array
+            items:
+              type: object
+              properties:
+                time:
+                  type: integer
+                chamber:
+                  $ref: ../schemas/printer/TemperatureProbe.yaml
+              example:
+                time: 1395651928
+                bed:
+                  actual: 50.221
+                  target: 70.0
+"409":
+  description: >-
+    If the printer is not operational or the selected printer profile does not have a heated chamber.

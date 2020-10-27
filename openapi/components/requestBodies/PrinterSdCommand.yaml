@@ -1,0 +1,17 @@
+content:
+  application/json:
+    schema:
+      type: object
+      description: >-
+        Printer SD card command
+      properties:
+        command:
+          type: string
+          description: >-
+            - `init`: Initializes the printer’s SD card, making it available for use. This also includes an initial retrieval of the list of files currently stored on the SD card, so after issuing that command a retrieval of the files on SD card will return a successful result.
+            - `refresh`: Refreshes the list of files stored on the printer’s SD card. Will return a 409 Conflict if the card has not been initialized yet (see the init command and SD state).
+            - `release`: Releases the SD card from the printer. The reverse operation to init. After issuing this command, the SD card won’t be available anymore, hence and operations targeting files stored on it will fail. Will return a 409 Conflict if the card has not been initialized yet (see the init command and SD state).
+          enum:
+            - init
+            - refresh
+            - release

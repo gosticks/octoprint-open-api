@@ -1,0 +1,21 @@
+summary: Retrieve the current SD state
+operationId: getSdState
+description: >-
+  Retrieves the current state of the printer’s SD card. For this request no authentication is needed.
+
+  If SD support has been disabled in OctoPrint’s settings, a 404 Not Found is returned.
+
+  Returns a 200 OK with an SD State Response in the body upon success.
+responses:
+  "200":
+    description: >-
+      SD State Response
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            ready:
+              type: boolean
+  "409":
+    description: If SD support has been disabled in OctoPrint’s config.

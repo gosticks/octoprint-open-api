@@ -1,0 +1,13 @@
+summary: Issue an SD command
+operationId: sendSdCmd
+description: >-
+  SD commands allow initialization, refresh and release of the printer’s SD card (if available).
+requestBody:
+  $ref: ../../components/requestBodies/PrinterSdCommand.yaml
+responses:
+  "204":
+    description: >-
+      No error
+  "409":
+    description: >-
+      If a refresh or release command is issued but the SD card has not been initialized (e.g. via init.

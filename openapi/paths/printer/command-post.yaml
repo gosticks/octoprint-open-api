@@ -1,0 +1,13 @@
+summary: Send an arbitrary command to the printer
+operationId: sendPrinterCmd
+description: >-
+  Sends any command to the printer via the serial interface. Should be used with some care as some commands can interfere with or even stop a running print job.
+requestBody:
+  content:
+    application/json:
+      schema:
+        $ref: ../../components/requestBodies/ArbitraryPrinterCmd.yaml
+responses:
+  "204":
+    description: >-
+      No error

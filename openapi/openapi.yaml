@@ -46,3 +46,21 @@ paths:
       $ref: paths/printer/tool-get.yaml
     post:
       $ref: paths/printer/tool-post.yaml
+  /printer/bed:
+    get:
+      $ref: paths/printer/bed-get.yaml
+    post:
+      $ref: paths/printer/bed-post.yaml
+  /printer/chamber:
+    get:
+      $ref: paths/printer/chamber-get.yaml
+    post:
+      $ref: paths/printer/chamber-post.yaml
+  /printer/sd:
+    get:
+      $ref: paths/printer/sd-get.yaml
+    post:
+      $ref: paths/printer/sd-post.yaml
+  /printer/command:
+    post:
+      $ref: paths/printer/command-post.yaml

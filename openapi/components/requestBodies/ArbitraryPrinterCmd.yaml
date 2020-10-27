@@ -1,0 +1,28 @@
+type: object
+description: >-
+  Arbitrary Command Request
+properties:
+  command:
+    type: string
+    description: >-
+      Single command to send to the printer, mutually exclusive with commands and script.
+  commands:
+    type: array
+    items:
+      type: string
+    description: >-
+      Multiple commands to send to the printer (in the given order), mutually exclusive with command and script.
+  script:
+    type: string
+    description: >-
+      Name of the GCODE script template to send to the printer, mutually exclusive with command and commands.
+  parameters:
+    type: object
+    additionalProperties: true
+    description: >-
+      Key value pairs of parameters to replace in sent commands/provide to the script renderer
+  context:
+    type: object
+    additionalProperties: true
+    description: >-
+      (only if script is set) additional template variables to provide to the script render
