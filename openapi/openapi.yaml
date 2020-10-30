@@ -67,3 +67,7 @@ paths:
   /printer/command:
     post:
       $ref: paths/printer/command/post.yaml
+  /printerprofiles:
+    get:
+      $ref: paths/printerprofiles/get.yaml
+

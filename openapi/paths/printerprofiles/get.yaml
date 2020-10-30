@@ -1,0 +1,17 @@
+summary: Retrieve all printer profiles
+operationId: getPrinterProfiles
+description: >-
+  Retrieves a list of all configured printer profiles.
+responses:
+  "200":
+    description: >- 
+      List of available printer profiles
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            profiles:
+              type: array
+              items:
+                $ref: ../../components/schemas/printer/Profile.yaml
