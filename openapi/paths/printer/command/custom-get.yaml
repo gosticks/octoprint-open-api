@@ -5,4 +5,4 @@ description: >-
 
   Please refer to the documentation of custom controls on what data structure to expect here.
 responses:
-  $ref: ../../components/responses/CustomControls.yaml
+  $ref: ../../../components/responses/CustomControls.yaml
