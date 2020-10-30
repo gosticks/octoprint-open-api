@@ -1,0 +1,10 @@
+type: object
+properties:
+  x:
+    $ref: ../utils/AxisProperty.yaml
+  y:
+    $ref: ../utils/AxisProperty.yaml
+  z:
+    $ref: ../utils/AxisProperty.yaml
+  e:
+    $ref: ../utils/AxisProperty.yaml

@@ -1,0 +1,28 @@
+type: object
+description: >-
+  A simple Box
+properties:
+  min_x:
+    type: number
+    description: >-
+      Minimum X coordinate defining the safe custom bounding box. Smaller value than the minimum X coordinate of the print volume.
+  max_x:
+    type: number
+    description: >-
+      Maximum X coordinate defining the safe custom bounding box. Larger value than the maximum X coordinate of the print volume.
+  min_y:
+    type: number
+    description: >-
+      Minimum Y coordinate defining the safe custom bounding box. Smaller value than the minimum Y coordinate of the print volume.
+  max_y:
+    type: number
+    description: >-
+      Maximum Y coordinate defining the safe custom bounding box. Larger value than the maximum Y coordinate of the print volume.
+  min_z:
+    type: number
+    description: >-
+      Minimum Z coordinate defining the safe custom bounding box. Smaller value than the minimum Z coordinate of the print volume.
+  max_z:
+    type: number
+    description: >-
+      Maximum Z coordinate defining the safe custom bounding box. Larger value than the maximum Z coordinate of the print volume.

@@ -1,0 +1,10 @@
+type: object
+properties:
+  speed:
+    type: integer
+    description: >-
+      Maximum speed of the axis in mm/min.
+  inverted:
+    type: boolean
+    description: >-
+      Whether the axis is inverted or not.

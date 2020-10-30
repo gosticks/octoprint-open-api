@@ -12,4 +12,4 @@ properties:
       printerProfile:
         type: string
   options:
-    $ref: ./PrinterConnectionOptions.yaml
+    $ref: ./ConnectionOptions.yaml

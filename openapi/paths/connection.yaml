@@ -11,7 +11,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/ConnectionInfo.yaml
+            $ref: ../components/schemas/printer/ConnectionInfo.yaml
 post:
   summary: Change Printer Connection
   operationId: setConnectionOptions

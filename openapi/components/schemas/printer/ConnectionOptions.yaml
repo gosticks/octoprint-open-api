@@ -11,7 +11,7 @@ properties:
   printerProfiles:
     type: array
     items:
-      $ref: ./PrinterProfile.yaml
+      $ref: ./Profile.yaml
   baudratePreference:
     type: number
   printerProfilePreference:

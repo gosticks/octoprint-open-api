@@ -1,0 +1,32 @@
+type: object
+description: >-
+  Printer volume
+properties:
+  formFactor:
+    type: string
+    description: >-
+      The form factor of the printer’s bed, valid values are “rectangular” and “circular”
+  origin:
+    type: string
+    description: >-
+      The location of the origin on the printer’s bed, valid values are “lowerleft” and “center”
+    enum:
+      - lowerleft
+      - center
+  width:
+    description: The width of the print volume. For circular beds, the diameter of the bed.
+    type: number
+  height:
+    description: The depth of the print volume. For circular beds, this is the diameter of the bed and will be forced to be the same as volume.width upon saving.
+    type: number
+  depth:
+    type: number
+    description: The height of the print volume
+  custom_box:
+    description: >-
+      If the printer has a custom bounding box where the print head can be safely moved to, exceeding the defined print volume, that bounding box will be defined here. Otherwise (safe area == print volume) this value will be false.
+    oneOf:
+      - type: boolean
+      - $ref: ./Box.yaml
+
+

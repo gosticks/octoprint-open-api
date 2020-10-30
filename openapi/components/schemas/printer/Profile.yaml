@@ -1,0 +1,51 @@
+type: object
+description: >-
+  Printer profile
+properties:
+  id: 
+    type: string
+    description: >-
+      Identifier of the profile. Will always be returned in responses, is mandatory in add requests but can be left out of update requests.
+  name: 
+    type: string
+    description: >-
+      Display name of the profile. Will always be returned in responses, is mandatory in add requests but can be left out of update requests.
+  color:
+    type: string
+    description: >-
+      The color to associate with this profile (used in the UI’s title bar). Valid values are “default”, “red”, “orange”, “yellow”, “green”, “blue”, “black”. Will always be returned in responses but can be left out of save/update requests.
+  model:
+    type: string
+    description: >-
+      Printer model of the profile. Will always be returned in responses but can be left out of save/update requests.
+  default:
+    type: boolean
+    description: >-
+      Whether this is the default profile to be used with new connections (true) or not (false). Will always be returned in responses but can be left out of save/update requests.
+  current:
+    type: boolean
+    description: >-
+      Whether this is the profile currently active. Will always be returned in responses but ignored in save/update requests.
+  resource:
+    type: string
+    format: url
+    description: >-
+      Resource URL of the profile, will always be returned in responses but can be left out of save/update requests.
+  volume:
+    description: >-
+      The print volume, will always be returned in responses but can be left out of save/update requests.
+    $ref: ../utils/Volume.yaml
+  heatedBed:
+    type: boolean
+    description: >-
+      Whether the printer has a headed bed.
+  heatedChamber:
+    type: boolean
+    description: >-
+      Whether the printer has a heated chamber (true) or not (false)
+  axis:
+    $ref: "./Axis.yaml"
+    description: >-
+      Description of the printer’s axes properties, one entry each for x, y, z and e holding maximum speed and whether this axis is inverted or not.
+  extruder:
+    $ref: "./Extruder.yaml"
