@@ -1,0 +1,19 @@
+summary: Update Settings
+operation: updateSettings
+description: >-
+  Saves the provided settings in OctoPrint.
+
+  Expects a JSON object with the settings to change as request body. This can be either a full settings tree, or only a partial tree containing only those fields that should be updated.
+requestBody:
+  content:
+    application/json:
+      schema:
+        $ref: ../../components/schemas/Config.yaml
+responses:
+  "200":
+    description: >-
+      Current OctoPrint state
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/schemas/Config.yaml

@@ -1,0 +1,4 @@
+type: object
+description: >-
+  OctoPrint config (Work in Progress)
+additionalProperties: true

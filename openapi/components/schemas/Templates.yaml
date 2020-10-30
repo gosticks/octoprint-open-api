@@ -1,0 +1,6 @@
+type: object
+required:
+  - id
+  - name
+properties:
+  additionProperties: true

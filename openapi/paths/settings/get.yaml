@@ -1,0 +1,12 @@
+summary: Retrieve current settings
+operation: getSettings
+description: >-
+  Retrieves the current configuration of OctoPrint.
+responses:
+  "200":
+    description: >-
+      Current OctoPrint state
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/schemas/Config.yaml

@@ -1,0 +1,14 @@
+summary: Fetch template data
+operation: getTemplates
+description: >-
+  Fetch data (currently only the sorting order) of all registered template components in the system.
+
+  Use this to get a full list of the identifiers of all UI components provided either by core OctoPrint or any currently active plugins.
+responses:
+  "200":
+    description: >-
+      Current OctoPrint state
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/schemas/Templates.yaml

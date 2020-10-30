@@ -54,7 +54,7 @@
   - [x] Model: Temperature State
   - [x] Model: SD State
   - [x] Model: Arbitrary Command Request
-- [ ] Printer profile operations [link](https://docs.octoprint.org/en/master/api/printerprofiles.html)
+- [x] Printer profile operations [link](https://docs.octoprint.org/en/master/api/printerprofiles.html)
   - [x] Retrieve all printer profiles
   - [x] Retrieve a single printer profile
   - [x] Add a new printer profile
@@ -63,11 +63,11 @@
   - [x] Model: Profile list
   - [x] Model: Add or update request
   - [x] Model: Profile
-- [ ] Settings [link](https://docs.octoprint.org/en/master/api/settings.html)
-  - [ ] Retrieve current settings
-  - [ ] Save settings
-  - [ ] Regenerate the system wide API key
-  - [ ] Fetch template data
+- [x] Settings [link](https://docs.octoprint.org/en/master/api/settings.html)
+  - [x] Retrieve current settings
+  - [x] Save settings
+  - [x] Regenerate the system wide API key
+  - [x] Fetch template data
   - [ ] Model: Config
 - [ ] Slicing TBD [link](https://docs.octoprint.org/en/master/api/slicing.html)
 - [ ] System [link](https://docs.octoprint.org/en/master/api/system.html)
