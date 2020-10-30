@@ -1,0 +1,20 @@
+summary: Retrieve a single printer profile
+operationId: getPrinterProfile
+description: >-
+  Retrieves an existing single printer profile.
+parameters:
+  - in: path
+    name: identifier
+    description: >-
+      identifier of a given printer profile
+responses:
+  "200":
+    description: >- 
+      List of available printer profiles
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/schemas/printer/Profile.yaml
+  "404":
+    description: >-
+      The profile does not exist

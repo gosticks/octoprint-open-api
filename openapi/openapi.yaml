@@ -70,4 +70,7 @@ paths:
   /printerprofiles:
     get:
       $ref: paths/printerprofiles/get.yaml
+  /printerprofiles/{identifier}:
+    get:
+      $ref: paths/printerprofiles/{identifier}-get.yaml
 

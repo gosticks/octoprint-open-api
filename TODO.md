@@ -56,7 +56,7 @@
   - [x] Model: Arbitrary Command Request
 - [ ] Printer profile operations [link](https://docs.octoprint.org/en/master/api/printerprofiles.html)
   - [x] Retrieve all printer profiles
-  - [ ] Retrieve a single printer profile
+  - [x] Retrieve a single printer profile
   - [ ] Add a new printer profile
   - [ ] Update an existing printer profile
   - [ ] Remove an existing printer profile
