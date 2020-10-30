@@ -61,6 +61,9 @@ paths:
       $ref: paths/printer/sd-get.yaml
     post:
       $ref: paths/printer/sd-post.yaml
+  /printer/command/custom:
+    get:
+      $ref: paths/printer/command/custom-get.yaml
   /printer/command:
     post:
-      $ref: paths/printer/command-post.yaml
+      $ref: paths/printer/command/post.yaml

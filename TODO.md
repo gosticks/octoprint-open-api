@@ -37,7 +37,7 @@
   - [ ] Model: Logfile Retrieve Response
   - [ ] Model: File information
   - [ ] Model: References
-- [ ] Printer operations [link](https://docs.octoprint.org/en/master/api/printer.html)
+- [x] Printer operations [link](https://docs.octoprint.org/en/master/api/printer.html)
   - [x] Retrieve the current printer state
   - [x] Issue a print head command
   - [x] Issue a tool command
@@ -49,12 +49,11 @@
   - [x] Issue an SD command
   - [x] Retrieve the current SD state
   - [x] Send an arbitrary command to the printer
-  - [ ] Retrieve custom controls
+  - [x] Retrieve custom controls (PARTIAL)
   - [x] Model: Full State Response
   - [x] Model: Temperature State
   - [x] Model: SD State
   - [x] Model: Arbitrary Command Request
-  - [ ] Model: Custom Controls Response
 - [ ] Printer profile operations [link](https://docs.octoprint.org/en/master/api/printerprofiles.html)
   - [ ] Retrieve all printer profiles
   - [ ] Retrieve a single printer profile
@@ -132,3 +131,8 @@
   - [ ] Finish wizards
   - [ ] Model: Wizard data entry
 - [ ] Common Data models [link](https://docs.octoprint.org/en/master/api/datamodel.html)
+
+## LATER
+
+- [ ] Model: Custom Controls Response
+- [ ] Retrieve custom controls (FULL)

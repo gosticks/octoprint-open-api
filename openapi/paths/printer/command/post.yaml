@@ -6,7 +6,7 @@ requestBody:
   content:
     application/json:
       schema:
-        $ref: ../../components/requestBodies/ArbitraryPrinterCmd.yaml
+        $ref: ../../../components/requestBodies/ArbitraryPrinterCmd.yaml
 responses:
   "204":
     description: >-

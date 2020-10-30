@@ -1,0 +1,7 @@
+"200":
+  description: Custom Controls
+  content:
+    application/json:
+      schema:
+        type: object
+        additionalProperties: true

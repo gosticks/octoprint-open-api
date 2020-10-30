@@ -1,0 +1,8 @@
+summary: Retrieve custom controls
+operationId: getCustomControls
+description: >-
+  Retrieves the custom controls as configured in config.yaml.
+
+  Please refer to the documentation of custom controls on what data structure to expect here.
+responses:
+  $ref: ../../components/responses/CustomControls.yaml
