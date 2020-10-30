@@ -57,11 +57,11 @@
 - [ ] Printer profile operations [link](https://docs.octoprint.org/en/master/api/printerprofiles.html)
   - [x] Retrieve all printer profiles
   - [x] Retrieve a single printer profile
-  - [ ] Add a new printer profile
-  - [ ] Update an existing printer profile
-  - [ ] Remove an existing printer profile
-  - [ ] Model: Profile list
-  - [ ] Model: Add or update request
+  - [x] Add a new printer profile
+  - [x] Update an existing printer profile
+  - [x] Remove an existing printer profile
+  - [x] Model: Profile list
+  - [x] Model: Add or update request
   - [x] Model: Profile
 - [ ] Settings [link](https://docs.octoprint.org/en/master/api/settings.html)
   - [ ] Retrieve current settings

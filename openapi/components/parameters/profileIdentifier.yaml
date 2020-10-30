@@ -1,0 +1,4 @@
+in: path
+name: identifier
+description: >-
+  identifier of a given printer profile

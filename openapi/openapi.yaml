@@ -75,4 +75,9 @@ paths:
   /printerprofiles/{identifier}:
     get:
       $ref: paths/printerprofiles/{identifier}-get.yaml
+    post:
+      $ref: paths/printerprofiles/{identifier}-post.yaml
+    delete:
+      $ref: paths/printerprofiles/{identifier}-delete.yaml
+
 

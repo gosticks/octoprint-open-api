@@ -3,10 +3,7 @@ operationId: getPrinterProfile
 description: >-
   Retrieves an existing single printer profile.
 parameters:
-  - in: path
-    name: identifier
-    description: >-
-      identifier of a given printer profile
+  - $ref: ../../components/parameters/profileIdentifier.yaml
 responses:
   "200":
     description: >- 

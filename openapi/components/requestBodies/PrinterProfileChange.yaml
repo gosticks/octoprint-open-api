@@ -1,0 +1,12 @@
+  content:
+    application/json:
+      schema:
+        type: object
+        required: 
+          - profile
+        properties:
+          basedOn:
+            type: string
+          profile:
+            $ref: ../../components/schemas/printer/Profile.yaml
+            required: false

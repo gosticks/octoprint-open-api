@@ -1,0 +1,13 @@
+summary: Remove an existing printer profile
+operationId: deletePrinterProfile
+description: >-
+  Deletes an existing printer profile by its profile identifier.
+parameters:
+  - $ref: ../../components/parameters/profileIdentifier.yaml
+responses:
+  "204":
+    description: >- 
+      Profile removed
+  "409":
+    description: >-
+      If the profile to be deleted is the currently selected profile, a 409 Conflict will be returned.
