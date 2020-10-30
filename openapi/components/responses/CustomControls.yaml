@@ -4,4 +4,9 @@
     application/json:
       schema:
         type: object
-        additionalProperties: true
+        properties:
+          controls:
+            type: array
+            items:
+              type: object
+              additionalProperties: true
