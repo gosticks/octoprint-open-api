@@ -1,0 +1,28 @@
+type: object
+properties:
+  key:
+    type: string
+    description: >-
+      The permission’s identifier
+  name:
+    type: string
+    description: >-
+      The permission’s name
+  dangerous:
+    type: boolean
+    description: >-
+      Whether the permission should be considered dangerous due to a high reponsibility (true) or not (false).
+  default_groups:
+    type: array
+    description: >-
+      List of group identifiers for which this permission is enabled by default
+    items:
+      type: string
+  description:
+    type: string
+    description: >-
+      Human readable description of the permission
+  needs:
+    description: >-
+      Needs assigned to the permission
+    $ref: ./Needs.yaml

@@ -1,0 +1,45 @@
+type: object
+description: >-
+  User record
+properties:
+  name:
+    type: string
+    description: >-
+      The user’s name
+  active:
+    type: boolean
+    description: >-
+      Whether the user’s account is active (true) or not (false)
+  user:
+    type: boolean
+    description: >-
+      Whether the user has user rights. Should always be true. Deprecated as of 1.4.0, use the users group instead.
+  admin:
+    type: boolean
+    description: >-
+      Whether the user has admin rights (true) or not (false). Deprecated as of 1.4.0, use the admins group instead.
+  apiKey:
+    type: string
+    description: >-
+      The user’s personal API key
+  settings:
+    type: object
+    description: >-
+      The user’s personal settings, might be an empty object.
+  groups:
+    type: array
+    description: >-
+      Groups assigned to the user
+    items:
+      $ref: ./GroupRecord.yaml
+  permissions:
+    type: array
+    description: >-
+      The list of permissions assigned to the user (note: this does not include implicit permissions inherit from groups).
+    items:
+      $ref: ./PermissionRecord.yaml
+  needs:
+    description: >-
+      Effective needs of the user
+    $ref: ./Needs.yaml
+
