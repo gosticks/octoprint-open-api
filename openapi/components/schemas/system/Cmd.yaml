@@ -1,0 +1,18 @@
+allOf:
+  - $ref: ./ClientCmd.yaml
+  - type: object
+    description: >-
+      The full command definition is not available via the API.
+    properties:
+      command:
+        type: string
+        description: >-
+          The full command line to execute for the command.
+      async:
+        type: boolean
+        description: >-
+          Whether to execute the command asynchronously or wait for its result before responding to the HTTP execution request.
+      ignore:
+        type: boolean
+        description: >-
+          Whether to ignore the return code of the command’s execution.

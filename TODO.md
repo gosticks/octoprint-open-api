@@ -70,13 +70,13 @@
   - [x] Fetch template data
   - [ ] Model: Config
 - [ ] Slicing TBD [link](https://docs.octoprint.org/en/master/api/slicing.html)
-- [ ] System [link](https://docs.octoprint.org/en/master/api/system.html)
-  - [ ] List all registered system commands
-  - [ ] List all registered system commands for a source
-  - [ ] Execute a registed system command
-  - [ ] Model: List all response
-  - [ ] Model: Client command definitions
-  - [ ] Model: Command definition
+- [x] System [link](https://docs.octoprint.org/en/master/api/system.html)
+  - [x] List all registered system commands
+  - [x] List all registered system commands for a source
+  - [x] Execute a registed system command
+  - [x] Model: List all response
+  - [x] Model: Client command definitions
+  - [x] Model: Command definition
 - [ ] Timelapse [link](https://docs.octoprint.org/en/master/api/timelapse.html)
   - [ ] Retrieve a list of timelapses and the current config
   - [ ] Delete a timelapse

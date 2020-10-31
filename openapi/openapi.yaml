@@ -79,5 +79,14 @@ paths:
       $ref: paths/printerprofiles/{identifier}-post.yaml
     delete:
       $ref: paths/printerprofiles/{identifier}-delete.yaml
-
+  /system/commands:
+    get:
+      $ref: paths/system/commands/get.yaml
+  /system/commands/{source}:
+    get:
+      $ref: paths/system/commands/{source}-get.yaml
+  /system/commands/{source}/{action}:
+    post:
+      $ref: paths/system/commands/{source}-{action}-post.yaml
+    
 

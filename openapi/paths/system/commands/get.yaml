@@ -1,0 +1,17 @@
+summary: List all registered system commands
+operationId: getSystemCmds
+description: >-
+  Retrieves all configured system commands.
+responses:
+  "200":
+    description: >-
+      All available system commands.
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            core:
+              type: array
+              items:
+                $ref: ../../../components/schemas/system/ClientCmd.yaml

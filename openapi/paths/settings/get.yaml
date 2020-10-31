@@ -1,5 +1,5 @@
 summary: Retrieve current settings
-operation: getSettings
+operationId: getSettings
 description: >-
   Retrieves the current configuration of OctoPrint.
 responses:

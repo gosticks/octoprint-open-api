@@ -1,0 +1,25 @@
+type: object
+description: >-
+  System command
+properties:
+  name:
+    type: string 
+    description: >-
+      The name of the command to display in the System menu.
+  action: 
+    type: string
+    description: >-
+      An identifier to refer to the command programmatically. The special action string divider signifies a divider in the menu.
+  confirm:
+    type: string
+    description: >-
+      If present and set, this text will be displayed to the user in a confirmation dialog they have to acknowledge in order to really execute the command.
+  source:
+    type: string
+    description: >-
+      Source of the command definition, currently either core (for system actions defined by OctoPrint itself) or custom (for custom system commands defined by the user through config.yaml).
+  resource: 
+    type: string
+    format: url
+    description: >-
+      The URL of the command to use for executing it.
