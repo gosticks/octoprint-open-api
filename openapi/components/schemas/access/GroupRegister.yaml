@@ -1,0 +1,12 @@
+allOf:
+  - $ref: ./GroupUpdate.yaml
+  - type: object
+    properties:
+      key:
+        type: string
+        description: >-
+          The group’s identifier
+      name:
+        type: string
+        description: >-
+          The group’s name

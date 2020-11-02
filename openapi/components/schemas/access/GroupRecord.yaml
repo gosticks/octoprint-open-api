@@ -1,26 +1,18 @@
-type: object
-properties:
-  key:
-    type: string
-  name:
-    type: string
-  description:
-    type: string
-  permissions:
-    type: array
-    items:
-      $ref: ./PermissionRecord.yaml
-  subgroups:
-    type: array
-    items:
-      $ref: ./GroupRecord.yaml
-  needs:
-    $ref: ./Needs.yaml
-  default:
-    type: boolean
-  removable:
-    type: boolean
-  changeable:
-    type: boolean
-  toggleable:
-    type: boolean
+allOf:
+  - $ref: ./GroupRegister.yaml
+  - type: object
+    properties:
+      needs:
+        $ref: ./Needs.yaml
+      removable:
+        type: boolean
+        description: >-
+          Whether this group can be removed (true) or not (false)
+      changeable:
+        type: boolean
+        description: >-
+          Whether this group can be modified (true) or not (false)
+      toggleable:
+        type: boolean
+        description: >-
+          Whether this group can be assigned to users or other groups (true) or not (false)

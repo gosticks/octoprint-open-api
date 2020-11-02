@@ -1,0 +1,22 @@
+type: object
+properties:
+  description:
+    type: string
+    description: >-
+      The group’s description. Set to empty if not provided.
+  permissions:
+    type: array
+    items:
+      $ref: ./PermissionRecord.yaml
+    description: >-
+      A list of identifier’s of permissions to assign to the group
+  subgroups:
+    type: array
+    items:
+      $ref: ./GroupRecord.yaml
+    description: >-
+      A list of identifier’s of groups to assign to the group as subgroups
+  default:
+    type: boolean
+    description: >-
+      Whether to assign the group to new users by default (true) or not (false, default value)

@@ -90,11 +90,11 @@
   - [ ] Model: Z-change-triggered timelapse
   - [ ] Model: Time triggered timelapse
 - [ ] Access Control [link](https://docs.octoprint.org/en/master/api/access.html)
-  - [ ] List all permissions
+  - [x] List all permissions
   
   Groups
 
-  - [ ] Get group list
+  - [x] Get group list
   - [ ] Add a new group
   - [ ] Retrieve a group
   - [ ] Update a group
@@ -113,10 +113,10 @@
   - [ ] Update users settings
   - [ ] Regenerate users api key
   - [ ] Delete users api key
-  - [ ] Model: Permission list response
-  - [ ] Model: Group list response
-  - [ ] Model: Group registration request
-  - [ ] Model: Group update request
+  - [x] Model: Permission list response
+  - [x] Model: Group list response
+  - [x] Model: Group registration request
+  - [x] Model: Group update request
   - [ ] Model: User list response
   - [ ] Model: User registration request
   - [ ] Model: User update request

@@ -91,3 +91,8 @@ paths:
   /access/permissions:
     get:
       $ref: paths/access/permissions-get.yaml
+  /access/groups:
+    get:
+      $ref: paths/access/groups/get.yaml
+    post:
+      $ref: paths/access/groups/post.yaml

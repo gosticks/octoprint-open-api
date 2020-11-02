@@ -1,0 +1,6 @@
+type: object
+properties:
+  groups:
+    type: array
+    items:
+      $ref: ./GroupRecord.yaml

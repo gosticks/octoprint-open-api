@@ -1,0 +1,20 @@
+summary: Add a new group
+operationId: addGroup
+description: >-
+  Adds a new group to the system.
+requestBody:
+  $ref: ../../../components/requestBodies/GroupRegistrationReq.yaml
+responses:
+  "200":
+    description: >-
+      List of all groups on the system
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/access/GroupList.yaml
+  "400":
+    description: >-
+      If any of the mandatory fields is missing or the request is otherwise invalid
+  "409":
+    description: >-
+      Conflict: A group with the provided key does already exist

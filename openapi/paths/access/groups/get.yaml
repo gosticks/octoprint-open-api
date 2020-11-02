@@ -1,0 +1,12 @@
+summary: Get all groups
+operationId: getAllGroups
+description: >-
+  Retrieves all groups registered in the system.
+responses:
+  "200":
+    description: >-
+      List of available groups on the system
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/access/GroupList.yaml
