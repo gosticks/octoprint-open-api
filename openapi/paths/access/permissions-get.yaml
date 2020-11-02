@@ -1,0 +1,17 @@
+summary: List all permissions
+operationId: getAllPermissions
+description: >-
+  Retrieves all permissions available in the system.
+responses:
+  "200":
+    description: >-
+      List of available permissions on the system
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            permissions:
+              type: array
+              items:
+                $ref: ../../components/schemas/access/PermissionRecord.yaml

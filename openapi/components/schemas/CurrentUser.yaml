@@ -5,8 +5,8 @@ properties:
   groups:
     type: array
     items:
-      $ref: ./GroupRecord.yaml
+      $ref: ./access/GroupRecord.yaml
   permissions:
     type: array
     items:
-      $ref: ./PermissionRecord.yaml
+      $ref: ./access/PermissionRecord.yaml

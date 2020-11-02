@@ -88,5 +88,6 @@ paths:
   /system/commands/{source}/{action}:
     post:
       $ref: paths/system/commands/{source}-{action}-post.yaml
-    
-
+  /access/permissions:
+    get:
+      $ref: paths/access/permissions-get.yaml
