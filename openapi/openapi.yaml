@@ -115,3 +115,6 @@ paths:
       $ref: paths/access/users/{username}-put.yaml
     delete:
       $ref: paths/access/users/{username}-delete.yaml
+  /access/users/{username}/password:
+    put:
+      $ref: paths/access/users/{username}-password-put.yaml
