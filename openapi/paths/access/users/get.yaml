@@ -1,0 +1,12 @@
+summary: Retrieve a list of users
+operationId: getAllUsers
+description: >-
+  Retrieves a list of all registered users in OctoPrint.
+responses:
+  "200":
+    description: >-
+      List of available groups on the system
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/access/UserList.yaml

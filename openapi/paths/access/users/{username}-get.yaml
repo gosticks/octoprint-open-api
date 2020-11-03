@@ -1,0 +1,17 @@
+summary: Retrieve a user
+operationId: getUser
+description: >-
+  Retrieves information about a user.
+parameters:
+  - $ref: ../../../components/parameters/username.yaml
+responses:
+  "200":
+    description: >-
+      Group record
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/access/UserRecord.yaml
+  "404":
+    description: >-
+      Unknown user

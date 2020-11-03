@@ -1,0 +1,17 @@
+summary: Delete a user
+operationId: deleteUser
+description: >-
+  Deletes a user by name.
+parameters:
+  - $ref: ../../../components/parameters/username.yaml
+responses:
+  "200":
+    description: >-
+      User was deleted
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/access/UserList.yaml
+  "404":
+    description: >-
+      User not found.

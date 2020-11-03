@@ -1,0 +1,20 @@
+type: object
+description: >-
+  User update request body
+properties:
+  active:
+    type: boolean
+    description: >-
+      Whether the user’s account is active (true) or not (false)
+  groups:
+    type: array
+    description: >-
+      Groups assigned to the user
+    items:
+      $ref: ./GroupRecord.yaml
+  permissions:
+    type: array
+    description: >-
+      The list of permissions assigned to the user (note: this does not include implicit permissions inherit from groups).
+    items:
+      $ref: ./PermissionRecord.yaml

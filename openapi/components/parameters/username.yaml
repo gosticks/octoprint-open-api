@@ -1,0 +1,6 @@
+in: path
+name: username
+description: >-
+  Name of the user which to retrieve
+schema:
+  type: string

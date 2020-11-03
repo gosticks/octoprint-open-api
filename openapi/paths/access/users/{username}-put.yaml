@@ -1,0 +1,22 @@
+summary: Update a user
+operationId: updateUser
+description: >-
+  Updates an existing user.
+parameters:
+  - $ref: ../../../components/parameters/username.yaml
+requestBody:
+  content:
+    application/json:
+      schema:
+        $ref: ../../../components/schemas/access/UserUpdate.yaml
+responses:
+  "200":
+    description: >-
+      Group records
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/access/UserList.yaml
+  "404":
+    description: >-
+      Unknown user

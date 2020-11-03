@@ -103,3 +103,15 @@ paths:
       $ref: paths/access/groups/{key}-put.yaml
     delete:
       $ref: paths/access/groups/{key}-delete.yaml
+  /access/users:
+    get:
+      $ref: paths/access/users/get.yaml
+    post:
+      $ref: paths/access/users/post.yaml
+  /access/users/{username}:
+    get:
+      $ref: paths/access/users/{username}-get.yaml
+    put:
+      $ref: paths/access/users/{username}-put.yaml
+    delete:
+      $ref: paths/access/users/{username}-delete.yaml

@@ -1,0 +1,23 @@
+summary: Add a new user
+operationId: addUser
+description: >-
+  Adds a new user to OctoPrint.
+requestBody:
+  content:
+    application/json:
+      schema:
+        $ref: ../../../components/schemas/access/UserRegister.yaml
+responses:
+  "200":
+    description: >-
+      List of all groups on the system
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/access/UserList.yaml
+  "400":
+    description: >-
+      If any of the mandatory fields is missing or the request is otherwise invalid
+  "409":
+    description: >-
+      Conflict:  A user with the provided name does already exist
