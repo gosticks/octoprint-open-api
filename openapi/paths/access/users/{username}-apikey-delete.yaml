@@ -1,0 +1,18 @@
+summary: Delete a user’s api key
+operationId: deleteApiKey
+description: >-
+  Deletes a user’s personal API key.
+
+  Requires the SETTINGS permission or to be logged in as the user.
+parameters:
+  - $ref: ../../../components/parameters/username.yaml
+responses:
+  "204":
+    description: >-
+      Api key was deleted
+  "403":
+    description: >-
+      No admin rights and not logged in as the user
+  "404":
+    description: >-
+      Unknown user

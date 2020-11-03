@@ -89,7 +89,7 @@
   - [ ] Model: Timelapse configuration
   - [ ] Model: Z-change-triggered timelapse
   - [ ] Model: Time triggered timelapse
-- [ ] Access Control [link](https://docs.octoprint.org/en/master/api/access.html)
+- [x] Access Control [link](https://docs.octoprint.org/en/master/api/access.html)
   - [x] List all permissions
   
   Groups
@@ -102,24 +102,24 @@
   
   Users
   
-  - [ ] Retrieve list of users
-  - [ ] Retrieve user
-  - [ ] Add new user
-  - [ ] Update user
-  - [ ] Delete user
-  - [ ] Change users password
-  - [ ] Get a users password
-  - [ ] Update users password
-  - [ ] Update users settings
-  - [ ] Regenerate users api key
-  - [ ] Delete users api key
+  - [x] Retrieve list of users
+  - [x] Retrieve user
+  - [x] Add new user
+  - [x] Update user
+  - [x] Delete user
+  - [x] Change users password
+  - [x] Get a users password
+  - [x] Update users password
+  - [x] Update users settings
+  - [x] Regenerate users api key
+  - [x] Delete users api key
   - [x] Model: Permission list response
   - [x] Model: Group list response
   - [x] Model: Group registration request
   - [x] Model: Group update request
-  - [ ] Model: User list response
-  - [ ] Model: User registration request
-  - [ ] Model: User update request
+  - [x] Model: User list response
+  - [x] Model: User registration request
+  - [x] Model: User update request
 - [ ] Util [link](https://docs.octoprint.org/en/master/api/util.html)
   - [ ] Test paths or URLs
   - [ ] Model: Path test result

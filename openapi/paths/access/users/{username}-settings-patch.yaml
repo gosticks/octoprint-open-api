@@ -1,0 +1,23 @@
+summary: Update a user’s settings
+operationId: updateUserSettings
+description: >-
+  Retrieves a user’s settings.
+  Will return a 200 OK with a JSON object representing the user’s personal settings (if any) as body.
+parameters:
+  - $ref: ../../../components/parameters/username.yaml
+requestBody:
+  content:
+    application/json:
+      schema:
+        type: object
+        additionalProperties: true
+responses:
+  "204":
+    description: >-
+      Settings updated
+  "403":
+    description: >-
+      No admin rights and not logged in as the user
+  "404":
+    description: >-
+      Unknown user

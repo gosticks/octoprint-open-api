@@ -1,0 +1,18 @@
+summary: Regenerate a user’s api key
+operationId: regenerateApiKey
+description: >-
+  Generates a new API key for the user.
+
+  Does not expect a body. Will return the generated API key as apikey property in the JSON object contained in the response body.
+parameters:
+  - $ref: ../../../components/parameters/username.yaml
+responses:
+  "200":
+    description: >-
+      Api key was regenerated
+  "403":
+    description: >-
+      No admin rights and not logged in as the user
+  "404":
+    description: >-
+      Unknown user

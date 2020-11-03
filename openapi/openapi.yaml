@@ -118,3 +118,13 @@ paths:
   /access/users/{username}/password:
     put:
       $ref: paths/access/users/{username}-password-put.yaml
+  /access/users/{username}/settings:
+    get:
+      $ref: paths/access/users/{username}-settings-get.yaml
+    patch:
+      $ref: paths/access/users/{username}-settings-patch.yaml
+  /access/users/{username}/apikey:
+    post:
+      $ref: paths/access/users/{username}-apikey-post.yaml
+    delete:
+      $ref: paths/access/users/{username}-apikey-delete.yaml
