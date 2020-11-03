@@ -3,12 +3,14 @@ operationId: addNewPrinterProfile
 description: >-
   Adds a new printer profile based on either the current default profile or the profile identified in basedOn.
   The provided profile data will be merged with the profile data from the base profile.
+tags:
+  - Profiles
 requestBody:
   content:
     application/json:
       schema:
         type: object
-        required: 
+        required:
           - profile
         properties:
           basedOn:
@@ -18,7 +20,7 @@ requestBody:
             required: false
 responses:
   "200":
-    description: >- 
+    description: >-
       Profile saved.
     content:
       application/json:
@@ -27,4 +29,3 @@ responses:
           properties:
             profile:
               $ref: ../../components/schemas/printer/Profile.yaml
-

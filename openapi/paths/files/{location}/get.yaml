@@ -3,6 +3,8 @@ operationId: getAllFilesInLocation
 description: >-
   Retrieve information regarding all files currently available and regarding the disk space still available locally in the system.
   By default only returns the files and folders in the root directory. If the query parameter `recursive` is provided and set to `true`, returns all files and folders.
+tags:
+  - Files
 parameters:
   - $ref: ../../../components/parameters/fileLocation.yaml
   - $ref: ../../../components/parameters/fileRecursive.yaml

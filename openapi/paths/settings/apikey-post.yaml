@@ -4,6 +4,9 @@ description: >-
   Generates a new system wide API key.
 
   Does not expect a body. Will return the generated API key as apikey property in the JSON object contained in the response body.
+tags:
+  - System
+  - Settings
 responses:
   "200":
     description: >-

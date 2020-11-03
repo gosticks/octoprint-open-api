@@ -2,9 +2,11 @@ summary: Retrieve all printer profiles
 operationId: getPrinterProfiles
 description: >-
   Retrieves a list of all configured printer profiles.
+tags:
+  - Profiles
 responses:
   "200":
-    description: >- 
+    description: >-
       List of available printer profiles
     content:
       application/json:

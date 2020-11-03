@@ -2,6 +2,8 @@ summary: Delete a language pack
 operationId: deleteLanguagePack
 description: >-
   Deletes the language pack pack for locale locale. Can be either the _core pack (containing translations for core OctoPrint) or the language pack for a plugin specified by the plugin identifier.
+tags:
+  - Languages
 parameters:
   - in: path
     name: locale

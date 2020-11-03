@@ -1,7 +1,7 @@
 post:
   tags:
-    - user
-    - Session & Login
+    - User
+    - General
   summary: Logout
   description: Ends the current login session of the current user
   operationId: logout

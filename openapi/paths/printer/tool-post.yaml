@@ -2,6 +2,8 @@ summary: Issue a tool command
 operationId: sendToolCmd
 description: >-
   Tool commands allow setting the temperature and temperature offsets for the printer’s tools (hotends), selecting the current tool and extruding/retracting from the currently selected tool.
+tags:
+  - Tool
 requestBody:
   $ref: ../../components/requestBodies/PrinterToolCommand.yaml
 responses:

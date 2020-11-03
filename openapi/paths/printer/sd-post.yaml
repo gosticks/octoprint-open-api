@@ -2,6 +2,8 @@ summary: Issue an SD command
 operationId: sendSdCmd
 description: >-
   SD commands allow initialization, refresh and release of the printer’s SD card (if available).
+tags:
+  - SD Card
 requestBody:
   $ref: ../../components/requestBodies/PrinterSdCommand.yaml
 responses:

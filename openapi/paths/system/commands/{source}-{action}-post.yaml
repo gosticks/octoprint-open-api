@@ -2,6 +2,8 @@ summary: Execute a registered system command
 operationId: executeSysCmd
 description: >-
   Execute the system command action defined in source.
+tags:
+  - System Commands
 parameters:
   - $ref: ../../../components/parameters/systemCmdSource.yaml
   - in: path

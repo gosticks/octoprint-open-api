@@ -2,6 +2,8 @@ summary: List all registered system commands for a source
 operationId: getSystemSourceCmds
 description: >-
   Retrieves the configured system commands for the specified source.
+tags:
+  - System Commands
 parameters:
   - $ref: ../../../components/parameters/systemCmdSource.yaml
 responses:

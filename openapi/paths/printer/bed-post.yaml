@@ -2,6 +2,8 @@ summary: Issue a bed command
 operationId: sendBedCmd
 description: >-
   Bed commands allow setting the temperature and temperature offsets for the printer’s heated bed.
+tags:
+  - Bed
 requestBody:
   $ref: ../../components/requestBodies/PrinterBedCommand.yaml
 responses:

@@ -8,3 +8,4 @@ properties:
     description: >-
       Remaining free space
     type: string
+    example: "25.4G"

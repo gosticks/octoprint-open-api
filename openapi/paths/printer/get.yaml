@@ -1,6 +1,8 @@
 summary: Printer State
 description: Retrieves the current state of the printer.
 operationId: getPrinterState
+tags:
+  - State
 parameters:
   - $ref: ../../components/parameters/history.yaml
   - $ref: ../../components/parameters/limit.yaml

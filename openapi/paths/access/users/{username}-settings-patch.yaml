@@ -1,7 +1,7 @@
 summary: Update a user’s settings
 operationId: updateUserSettings
 tags:
-  - user
+  - User
 description: >-
   Retrieves a user’s settings.
   Will return a 200 OK with a JSON object representing the user’s personal settings (if any) as body.

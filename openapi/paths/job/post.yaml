@@ -2,6 +2,8 @@ summary: Issue a job command
 operationId: sendJobCommand
 description: >-
   Job commands allow starting, pausing and cancelling print jobs.
+tags:
+  - Jobs
 requestBody:
   $ref: ../../components/requestBodies/JobCommand.yaml
 responses:

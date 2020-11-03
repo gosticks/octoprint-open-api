@@ -4,6 +4,8 @@ description: >-
   Retrieves a list of installed language packs.
 
   The response body will contain a list of available languages packs.
+tags:
+  - Languages
 responses:
   "200":
     description: >-

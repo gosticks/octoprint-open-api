@@ -3,13 +3,15 @@ operationId: updatePrinterProfile
 description: >-
   Adds a new printer profile based on either the current default profile or the profile identified in basedOn.
   The provided profile data will be merged with the profile data from the base profile.
+tags:
+  - Profiles
 parameters:
   - $ref: ../../components/parameters/profileIdentifier.yaml
 requestBody:
   $ref: "../../components/requestBodies/PrinterProfileChange.yaml"
 responses:
   "200":
-    description: >- 
+    description: >-
       Profile saved.
     content:
       application/json:
@@ -18,4 +20,3 @@ responses:
           properties:
             profile:
               $ref: ../../components/schemas/printer/Profile.yaml
-

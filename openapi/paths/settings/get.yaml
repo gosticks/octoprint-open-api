@@ -2,6 +2,8 @@ summary: Retrieve current settings
 operationId: getSettings
 description: >-
   Retrieves the current configuration of OctoPrint.
+tags:
+  - Settings
 responses:
   "200":
     description: >-

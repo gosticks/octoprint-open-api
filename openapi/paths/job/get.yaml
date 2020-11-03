@@ -1,6 +1,8 @@
 summary: Retrieve information about the current job
 operationId: getCurrentJob
 description: Retrieve information about the current job (if there is one).
+tags:
+  - Jobs
 requestBody:
   content:
     application/json:

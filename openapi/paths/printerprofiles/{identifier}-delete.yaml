@@ -4,9 +4,11 @@ description: >-
   Deletes an existing printer profile by its profile identifier.
 parameters:
   - $ref: ../../components/parameters/profileIdentifier.yaml
+tags:
+  - Profiles
 responses:
   "204":
-    description: >- 
+    description: >-
       Profile removed
   "409":
     description: >-

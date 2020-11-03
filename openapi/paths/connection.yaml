@@ -1,6 +1,9 @@
 get:
   summary: Printer Connection
   operationId: getConnection
+  tags:
+    - General
+    - System
   description: >-
     Retrieve the current connection settings, including information
     regarding the available baudrates and serial ports and the current
@@ -15,6 +18,9 @@ get:
 post:
   summary: Change Printer Connection
   operationId: setConnectionOptions
+  tags:
+    - General
+    - System
   requestBody:
     required: true
     content:

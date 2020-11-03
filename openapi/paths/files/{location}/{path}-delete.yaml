@@ -1,6 +1,8 @@
 summary: Delete a file or folder
 operationId: deleteFileOrFolder
 description: Delete the selected path on the selected location.
+tags:
+  - Files
 parameters:
   - $ref: ../../../components/parameters/fileLocation.yaml
   - $ref: ../../../components/parameters/filePath.yaml

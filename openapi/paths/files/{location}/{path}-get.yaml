@@ -1,6 +1,8 @@
 summary: Retrieve a specific file’s or folder’s information
 operationId: getFileOrFolder
 description: Retrieves the selected file’s or folder’s information.
+tags:
+  - Files
 parameters:
   - $ref: ../../../components/parameters/fileLocation.yaml
   - $ref: ../../../components/parameters/filePath.yaml

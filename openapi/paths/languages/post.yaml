@@ -10,6 +10,8 @@ description: >-
   Only files with one of the extensions zip, tar.gz, tgz or tar will be processed, for other file extensions a 400 Bad Request will be returned.
 
   Will return a list of installed language packs upon completion, as described in Retrieve installed language packs.
+tags:
+  - Languages
 requestBody:
   content:
     multipart/form-data:

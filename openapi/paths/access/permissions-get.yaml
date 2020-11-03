@@ -2,6 +2,8 @@ summary: List all permissions
 operationId: getAllPermissions
 description: >-
   Retrieves all permissions available in the system.
+tags:
+  - Permissions
 responses:
   "200":
     description: >-

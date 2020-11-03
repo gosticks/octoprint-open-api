@@ -1,7 +1,7 @@
 summary: Delete a user’s api key
 operationId: deleteApiKey
 tags:
-  - user
+  - User
 description: >-
   Deletes a user’s personal API key.
 

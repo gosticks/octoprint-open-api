@@ -1,6 +1,8 @@
 summary: Upload file or create folder
 operationId: uploadFile
 description: Upload a file to the selected location or create a new empty folder on it.
+tags:
+  - Files
 parameters:
   - $ref: ../../../components/parameters/fileLocation.yaml
 requestBody:

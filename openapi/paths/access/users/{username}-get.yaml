@@ -1,7 +1,7 @@
 summary: Retrieve a user
 operationId: getUser
 tags:
-  - user
+  - User
 description: >-
   Retrieves information about a user.
 parameters:

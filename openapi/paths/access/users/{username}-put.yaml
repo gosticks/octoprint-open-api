@@ -1,7 +1,7 @@
 summary: Update a user
 operationId: updateUser
 tags:
-  - user
+  - User
 description: >-
   Updates an existing user.
 parameters:

@@ -2,6 +2,8 @@ summary: Issue a bed command
 operationId: sendChamberCmd
 description: >-
   Chamber commands allow setting the temperature and temperature offsets for the printer’s heated chamber.
+tags:
+  - Chamber
 requestBody:
   $ref: ../../components/requestBodies/PrinterChamberCommand.yaml
 responses:

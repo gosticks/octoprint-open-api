@@ -2,6 +2,8 @@ summary: Issue a print head command
 operationId: sendPrintheadCommand
 description: >-
   Print head commands allow jogging and homing the print head in all three axes.
+tags:
+  - Printhead
 requestBody:
   $ref: ../../components/requestBodies/PrintheadCommand.yaml
 responses:

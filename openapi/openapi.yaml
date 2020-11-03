@@ -11,29 +11,60 @@ servers:
 tags:
   - name: General
     description: General operations
-  - name: user
+  - name: User
     description: User operations
   - name: Groups
     description: User group management
-  - name: permissions
-  - name: system
+  - name: Permissions
+    description: >-
+      Retrieve system permission settings
+  - name: System
     description: OctoPrint system operations
+  - name: Settings
+    description: System settings
+  - name: System Commands
+    description: Manage and execute system commands
+
+  - name: Languages
+    description: Printer language configuration
+
+  - name: Printer
+    description: Printer operations
+  - name: Job
+    description: Control and monitor ongoing printer jobs
   - name: file
     description: File operations
-  - name: printer
-    description: Printer specific operations
-  - name: Session & Login
-    description: Handle authentication related actions
-  - name: access
-    description: Access control related operations and management
+
 x-tagGroups:
   - name: General
     tags:
       - General
+  - name: Printer
+    tags:
+      - State
+      - Jobs
+      - Tool
+      - Bed
+      - Printhead
+      - Chamber
+      - SD Card
+      - Profiles
+
+  - name: Files
+    tags:
+      - Files
+
   - name: User Management & Access
     tags:
-      - user
+      - User
       - Groups
+      - Permissions
+  - name: System
+    tags:
+      - System
+      - Settings
+      - System Commands
+      - Languages
 paths:
   /login:
     $ref: paths/login.yaml
@@ -46,6 +77,10 @@ paths:
   /connection:
     $ref: paths/connection.yaml
 
+  # File endpoints
+  /files:
+    get:
+      $ref: paths/files/get.yaml
   /files/{location}:
     get:
       $ref: paths/files/{location}/get.yaml
@@ -56,9 +91,8 @@ paths:
       $ref: ./paths/files/{location}/{path}-get.yaml
     delete:
       $ref: ./paths/files/{location}/{path}-delete.yaml
-  /files:
-    get:
-      $ref: paths/files/get.yaml
+
+  # Print job endpoints
   /job:
     get:
       $ref: paths/job/get.yaml
@@ -93,6 +127,8 @@ paths:
   /printer/command:
     post:
       $ref: paths/printer/command/post.yaml
+
+  # Printer profile management
   /printerprofiles:
     get:
       $ref: paths/printerprofiles/get.yaml
@@ -105,6 +141,8 @@ paths:
       $ref: paths/printerprofiles/{identifier}-post.yaml
     delete:
       $ref: paths/printerprofiles/{identifier}-delete.yaml
+
+  # OctoPrint system commands
   /system/commands:
     get:
       $ref: paths/system/commands/get.yaml
@@ -114,6 +152,20 @@ paths:
   /system/commands/{source}/{action}:
     post:
       $ref: paths/system/commands/{source}-{action}-post.yaml
+
+  /settings:
+    get:
+      $ref: paths/settings/get.yaml
+    post:
+      $ref: paths/settings/post.yaml
+  /settings/templates:
+    get:
+      $ref: paths/settings/templates-get.yaml
+  /settings/apikey:
+    get:
+      $ref: paths/settings/apikey-post.yaml
+
+  # Access Controls
   /access/permissions:
     get:
       $ref: paths/access/permissions-get.yaml
@@ -154,6 +206,8 @@ paths:
       $ref: paths/access/users/{username}-apikey-post.yaml
     delete:
       $ref: paths/access/users/{username}-apikey-delete.yaml
+
+  # Language endpoints
   /languages:
     get:
       $ref: paths/languages/get.yaml

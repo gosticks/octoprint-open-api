@@ -1,6 +1,8 @@
 summary: Issue a file command
 operationId: sendFileCommand
 description: Issue a file command to an existing file.
+tags:
+  - Files
 parameters:
   - $ref: ../../../components/parameters/fileLocation.yaml
   - $ref: ../../../components/parameters/filePath.yaml

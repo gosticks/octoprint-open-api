@@ -1,7 +1,7 @@
 post:
   tags:
-    - general
-    - user
+    - General
+    - User
   summary: Login
   description: >-
     Creates a login session or retrieves information about the currently existing session (“passive login”).

@@ -2,6 +2,8 @@ summary: List all registered system commands
 operationId: getSystemCmds
 description: >-
   Retrieves all configured system commands.
+tags:
+  - System Commands
 responses:
   "200":
     description: >-
