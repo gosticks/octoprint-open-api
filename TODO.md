@@ -24,13 +24,13 @@
   - [x] Issue a job command
   - [x] Retrieve information about the current job
   - [x] Model: Job information response
-- [ ] Languages [link](https://docs.octoprint.org/en/master/api/languages.html)
-  - [ ] Retrieve installed language packs
-  - [ ] Upload a language pack
-  - [ ] Delete a language pack
-  - [ ] Model: List response
-  - [ ] Model: Component list
-  - [ ] Model: Language pack metadata
+- [x] Languages [link](https://docs.octoprint.org/en/master/api/languages.html)
+  - [x] Retrieve installed language packs
+  - [x] Upload a language pack
+  - [x] Delete a language pack
+  - [x] Model: List response
+  - [x] Model: Component list
+  - [x] Model: Language pack metadata
 - [ ] Log file management (Plugin?) [link](https://docs.octoprint.org/en/master/bundledplugins/logging.html#sec-bundledplugins-logging-api)
   - [ ] Retrieve a list of available log files
   - [ ] Delete a specific logfile

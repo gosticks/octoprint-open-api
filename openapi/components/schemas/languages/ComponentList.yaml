@@ -1,0 +1,20 @@
+type: object
+description: >-
+  Component List
+properties:
+  identifier:
+    type: string
+    description: >-
+      The plugin’s identifier, `_core` for core OctoPrint, the plugin’s identifier for plugins
+    example: "_core"
+  display:
+    description: >-
+      Displayable name of the component, Core for core OctoPrint, the plugin’s name for plugins
+    type: string
+    example: "Core"
+  languages:
+    description: >-
+      Language packs for the component
+    type: array
+    items:
+      $ref: ./LanguagePackMeta.yaml

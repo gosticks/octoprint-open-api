@@ -1,0 +1,33 @@
+summary: Upload a language pack
+operationId: uploadLanguagePack
+description: >-
+  Uploads a new language pack to OctoPrint.
+
+  Other than most of the other requests on OctoPrint’s API which are expected as JSON, this request is expected as Content-Type: multipart/form-data due to the included file upload.
+
+  To upload a file, the request body must contain the file form field with the contents and file name of the file to upload.
+
+  Only files with one of the extensions zip, tar.gz, tgz or tar will be processed, for other file extensions a 400 Bad Request will be returned.
+
+  Will return a list of installed language packs upon completion, as described in Retrieve installed language packs.
+requestBody:
+  content:
+    multipart/form-data:
+      schema:
+        type: object
+        properties:
+          file:
+            description: The language pack file to upload
+            type: string
+            format: binary
+responses:
+  "200":
+    description: >-
+      The file was uploaded successfully
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/schemas/languages/LanguageList.yaml
+  "400":
+    description: >-
+      File has an invalid file extension

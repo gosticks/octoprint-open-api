@@ -1,0 +1,33 @@
+type: object
+description: >-
+  Language pack metadata
+required:
+  - locale
+  - locale_display
+  - locale_english
+properties:
+  locale:
+    description: >-
+      Locale of the language pack
+    type: string
+    example: "de"
+  locale_display:
+    description: >-
+      Displayable name of the locale
+    type: string
+    example: "Deutsch"
+  locale_english:
+    description: >-
+      English representation of the locale
+    type: string
+    example: "German"
+  last_update:
+    description: >-
+      Timestamp of the last update of the language pack
+    type: integer
+    example: 1474574597
+  author:
+    type: string
+    description: >-
+      Author of the language pack
+    example: "Gina Häußge"

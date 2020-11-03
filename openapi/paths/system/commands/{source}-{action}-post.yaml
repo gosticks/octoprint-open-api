@@ -6,6 +6,8 @@ parameters:
   - $ref: ../../../components/parameters/systemCmdSource.yaml
   - in: path
     name: action
+    schema:
+      type: string
     description: >-
       The identifier of the command, action from its definition
 responses:

@@ -1,0 +1,14 @@
+summary: Retrieve installed language packs
+operationId: getLanguages
+description: >-
+  Retrieves a list of installed language packs.
+
+  The response body will contain a list of available languages packs.
+responses:
+  "200":
+    description: >-
+      Available language packs
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/schemas/languages/LanguageList.yaml
