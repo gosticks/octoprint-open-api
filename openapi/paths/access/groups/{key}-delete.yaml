@@ -1,0 +1,24 @@
+summary: Delete a group
+operationId: deleteGroup
+description: >-
+  Deletes a group by its identifier.
+parameters:
+  - in: path
+    name: key
+    description: >-
+      The group’s identifier
+    schema:
+      type: string
+requestBody:
+  content:
+    application/json:
+      schema:
+        $ref: ../../../components/schemas/access/GroupUpdate.yaml
+responses:
+  "200":
+    description: >-
+      Group was deleted. A list of all available groups will be returned.
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/access/GroupList.yaml

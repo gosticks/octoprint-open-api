@@ -1,0 +1,19 @@
+summary: Retrieve a group
+operationId: getGroup
+description: >-
+  Retrieves an individual group record.
+parameters:
+  - in: path
+    name: key
+    description: >-
+      The group’s identifier
+    schema:
+      type: string
+responses:
+  "200":
+    description: >-
+      Group record
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/access/GroupRecord.yaml

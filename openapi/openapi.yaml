@@ -96,3 +96,10 @@ paths:
       $ref: paths/access/groups/get.yaml
     post:
       $ref: paths/access/groups/post.yaml
+  /access/groups/{key}:
+    get:
+      $ref: paths/access/groups/{key}-get.yaml
+    put:
+      $ref: paths/access/groups/{key}-put.yaml
+    delete:
+      $ref: paths/access/groups/{key}-delete.yaml

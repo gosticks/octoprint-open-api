@@ -1,0 +1,27 @@
+summary: Update a group
+operationId: updateGroup
+description: >-
+  Updates an existing group.
+parameters:
+  - in: path
+    name: key
+    description: >-
+      The group’s identifier
+    schema:
+      type: string
+requestBody:
+  content:
+    application/json:
+      schema:
+        $ref: ../../../components/schemas/access/GroupUpdate.yaml
+responses:
+  "200":
+    description: >-
+      Group records
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/access/GroupList.yaml
+  "400":
+    description: >-
+      If any of the mandatory fields is missing or the request is otherwise invalid

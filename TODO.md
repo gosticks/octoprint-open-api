@@ -95,10 +95,10 @@
   Groups
 
   - [x] Get group list
-  - [ ] Add a new group
-  - [ ] Retrieve a group
-  - [ ] Update a group
-  - [ ] Delete a group
+  - [x] Add a new group
+  - [x] Retrieve a group
+  - [x] Update a group
+  - [x] Delete a group
   
   Users
   
