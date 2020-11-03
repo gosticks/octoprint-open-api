@@ -1,5 +1,7 @@
 summary: Delete a group
 operationId: deleteGroup
+tags:
+  - Groups
 description: >-
   Deletes a group by its identifier.
 parameters:

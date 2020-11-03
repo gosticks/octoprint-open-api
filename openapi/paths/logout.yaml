@@ -1,5 +1,8 @@
 post:
-  summary: Logout User
+  tags:
+    - user
+    - Session & Login
+  summary: Logout
   description: Ends the current login session of the current user
   operationId: logout
   responses:

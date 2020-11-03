@@ -8,6 +8,32 @@ info:
   version: "1.0"
 servers:
   - url: "http://192.168.178.66:5000/api"
+tags:
+  - name: General
+    description: General operations
+  - name: user
+    description: User operations
+  - name: Groups
+    description: User group management
+  - name: permissions
+  - name: system
+    description: OctoPrint system operations
+  - name: file
+    description: File operations
+  - name: printer
+    description: Printer specific operations
+  - name: Session & Login
+    description: Handle authentication related actions
+  - name: access
+    description: Access control related operations and management
+x-tagGroups:
+  - name: General
+    tags:
+      - General
+  - name: User Management & Access
+    tags:
+      - user
+      - Groups
 paths:
   /login:
     $ref: paths/login.yaml

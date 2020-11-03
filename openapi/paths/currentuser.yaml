@@ -1,4 +1,7 @@
 get:
+  tags:
+    - user
+    - Session & Login
   summary: Current User
   description: >-
     Retrieves information about the current user.

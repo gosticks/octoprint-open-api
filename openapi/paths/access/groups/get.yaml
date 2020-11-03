@@ -1,5 +1,7 @@
 summary: Get all groups
 operationId: getAllGroups
+tags:
+  - Groups
 description: >-
   Retrieves all groups registered in the system.
 responses:

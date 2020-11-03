@@ -1,5 +1,7 @@
 summary: Retrieve a list of users
 operationId: getAllUsers
+tags:
+  - user
 description: >-
   Retrieves a list of all registered users in OctoPrint.
 responses:

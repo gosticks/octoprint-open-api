@@ -1,5 +1,7 @@
 summary: Regenerate a user’s api key
 operationId: regenerateApiKey
+tags:
+  - user
 description: >-
   Generates a new API key for the user.
 

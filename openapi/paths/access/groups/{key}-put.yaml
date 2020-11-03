@@ -1,5 +1,7 @@
 summary: Update a group
 operationId: updateGroup
+tags:
+  - Groups
 description: >-
   Updates an existing group.
 parameters:

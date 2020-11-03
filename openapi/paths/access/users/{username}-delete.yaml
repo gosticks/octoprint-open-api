@@ -2,6 +2,8 @@ summary: Delete a user
 operationId: deleteUser
 description: >-
   Deletes a user by name.
+tags:
+  - user
 parameters:
   - $ref: ../../../components/parameters/username.yaml
 responses:

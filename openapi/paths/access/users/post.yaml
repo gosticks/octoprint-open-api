@@ -1,5 +1,7 @@
 summary: Add a new user
 operationId: addUser
+tags:
+  - user
 description: >-
   Adds a new user to OctoPrint.
 requestBody:

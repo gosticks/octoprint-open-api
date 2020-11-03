@@ -1,5 +1,7 @@
 summary: Add a new group
 operationId: addGroup
+tags:
+  - Groups
 description: >-
   Adds a new group to the system.
 requestBody:
