@@ -4,8 +4,17 @@ info:
     name: Creative Commons
     url: https://creativecommons.org/licenses/by/3.0
   title: OctoPrint
-  description: API client for the OctoPrint 3D printer control server
-  version: "1.0"
+  description: >-
+    ## About
+      OctoPrint is an OpenSource community based 3D printer control system. This unofficial API definitions provides easy access to its exposed REST API and allows for easy client generation in languages supported by OpenAPI generators.
+
+      For more information about OctoPrint visit the official webpage [here](https://octoprint.org)
+
+    ## Limitations
+      - API documentation structure is currently still work in progress so the arrangement of the API endpoints in this documentation may change.
+
+    - Currently this API definitions does not included bundled Plugins (see official API [here](https://docs.octoprint.org/en/master/bundledplugins/logging.html#sec-bundledplugins-logging-api))
+  version: "0.8"
 servers:
   - url: "http://192.168.178.66:5000/api"
 tags:
