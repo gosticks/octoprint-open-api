@@ -13,7 +13,7 @@ info:
     ## Limitations
       - API documentation structure is currently still work in progress so the arrangement of the API endpoints in this documentation may change.
 
-    - Currently this API definitions does not included bundled Plugins (see official API [here](https://docs.octoprint.org/en/master/bundledplugins/logging.html#sec-bundledplugins-logging-api))
+    - Currently this API definitions does not include bundled Plugins (see official API [here](https://docs.octoprint.org/en/master/bundledplugins/logging.html#sec-bundledplugins-logging-api))
 
     - Timelapse endpoint is missing
     - Slicing endpoint is missing
@@ -21,7 +21,7 @@ info:
     - Push updates endpoint is missing
   version: "0.8"
 servers:
-  - url: "http://192.168.178.66:5000/api"
+  - url: "/api"
 tags:
   - name: General
     description: General operations
