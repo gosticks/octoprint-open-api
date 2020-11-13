@@ -19,6 +19,8 @@ info:
     - Slicing endpoint is missing
     - Wizard endpoint is missing
     - Push updates endpoint is missing
+    - Auth header definitions are still missing
+
   version: "0.8"
 servers:
   - url: "/api"
