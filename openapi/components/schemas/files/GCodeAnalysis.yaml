@@ -5,4 +5,4 @@ properties:
     description: >-
       The estimated print time of the file, in seconds
   filament:
-    $ref: "./Filament.yaml"
+    $ref: "./FilamentUsage.yaml"
