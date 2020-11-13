@@ -1,5 +1,5 @@
 summary: Regenerate the system wide API key
-operation: regenerateApiKey
+operationId: regenerateApiKey
 description: >-
   Generates a new system wide API key.
 

@@ -3,4 +3,8 @@ required:
   - id
   - name
 properties:
-  additionProperties: true
+  id:
+    type: string
+  name:
+    type: string
+additionalProperties: true

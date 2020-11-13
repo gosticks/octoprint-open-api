@@ -1,5 +1,5 @@
 summary: Fetch template data
-operation: getTemplates
+operationId: getTemplates
 description: >-
   Fetch data (currently only the sorting order) of all registered template components in the system.
 

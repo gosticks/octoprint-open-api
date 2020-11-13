@@ -1,5 +1,5 @@
 summary: Regenerate a user’s api key
-operationId: regenerateApiKey
+operationId: regenerateUserApiKey
 tags:
   - User
 description: >-

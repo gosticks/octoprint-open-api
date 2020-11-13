@@ -1,5 +1,5 @@
 summary: Update Settings
-operation: updateSettings
+operationId: updateSettings
 description: >-
   Saves the provided settings in OctoPrint.
 
