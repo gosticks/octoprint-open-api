@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "openapi preview-docs",
-    "build": "openapi bundle -o ./dist/api.yaml && openapi bundle -o ./dist/api.yaml",
+    "build": "openapi bundle -o ./dist/api.yaml",
     "build-docs": "openapi bundle -o ./docs/api.json",
     "test": "openapi lint"
   }
