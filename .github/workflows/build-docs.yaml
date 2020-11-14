@@ -5,9 +5,25 @@ on:
   workflow_dispatch:
 
 jobs:
-  test_job:
+  test:
     runs-on: ubuntu-latest
-    name: Testing private usage
+    name: Test OpenAPI specification
+    steps:
+      # To use this repository's private action, you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: Install dependencies
+        run: npm ci
+      - run: npm run test
+  build:
+    runs-on: ubuntu-latest
+    needs: test
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
@@ -30,3 +46,14 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: docs # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
+  dispatch:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: username/my-repo
+          event-type: my-event
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
