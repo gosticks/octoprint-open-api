@@ -1,5 +1,7 @@
 in: path
 name: identifier
+schema:
+  type: string
 description: >-
   identifier of a given printer profile
 required: true

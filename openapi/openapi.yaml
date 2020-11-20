@@ -1,4 +1,11 @@
 openapi: 3.0.2
+servers:
+  - url: "http://{url}:{port}/api"
+    variables:
+      url:
+        default: localhost
+      port:
+        default: "80"
 info:
   license:
     name: Creative Commons
@@ -22,8 +29,7 @@ info:
     - Auth header definitions are still missing
 
   version: "0.8"
-servers:
-  - url: "/api"
+
 tags:
   - name: General
     description: General operations

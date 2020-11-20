@@ -5,7 +5,13 @@ description: >-
 tags:
   - System Commands
 parameters:
-  - $ref: ../../../components/parameters/systemCmdSource.yaml
+  - in: path
+    name: source
+    description: >-
+      The source for which to list commands, currently either core or  custom
+    required: true
+    schema:
+      type: string
   - in: path
     name: action
     required: true

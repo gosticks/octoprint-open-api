@@ -3,3 +3,5 @@ name: source
 description: >-
   The source for which to list commands, currently either core or custom
 required: true
+schema:
+  type: string
