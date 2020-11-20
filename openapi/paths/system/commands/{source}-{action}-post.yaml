@@ -8,6 +8,7 @@ parameters:
   - $ref: ../../../components/parameters/systemCmdSource.yaml
   - in: path
     name: action
+    required: true
     schema:
       type: string
     description: >-

@@ -7,12 +7,14 @@ tags:
 parameters:
   - in: path
     name: locale
+    required: true
     schema:
       type: string
     description: >-
       The identifier of the command, action from its definition
   - in: path
     name: pack
+    required: true
     schema:
       type: string
     description: >-

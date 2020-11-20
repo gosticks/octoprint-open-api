@@ -9,6 +9,7 @@ parameters:
     name: key
     description: >-
       The group’s identifier
+    required: true
     schema:
       type: string
 requestBody:

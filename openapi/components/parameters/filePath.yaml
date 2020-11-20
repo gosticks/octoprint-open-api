@@ -2,6 +2,7 @@ in: path
 name: path
 description: >-
   The filename of the file for which to retrieve the information
+required: true
 schema:
   type: string
   format: uri
