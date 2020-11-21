@@ -31,8 +31,7 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
-      # bump doc version
-      - run: sed  -i '/version/s/[^.]*$/'"${{ github.ref }}\"/" ./openapi/openapi.yaml
+      # TODO: bump yaml api version with each release
       - run: npm run build
       # build docks & deploy
       - run: npm run build-docs
