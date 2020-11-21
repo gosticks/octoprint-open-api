@@ -32,7 +32,7 @@ jobs:
           draft: false
           prerelease: false
       # bump doc version
-      - run: sed  -i '/version/s/[^.]*$/'"${{ steps.create_release.outputs.tag_name }}\"/" ./openapi/openapi.yaml
+      - run: sed  -i '/version/s/[^.]*$/'"${{ github.ref }}\"/" ./openapi/openapi.yaml
       - run: npm run build
       # build docks & deploy
       - run: npm run build-docs
