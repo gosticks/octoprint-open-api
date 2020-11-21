@@ -32,6 +32,9 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
+      # bump doc version
+      - run: sed  -i '/version/s/[^.]*$/'"${{ steps.create_release.outputs.tag_name }}\"/"
+      # build docks & deploy
       - run: npm run build-docs
       - name: Deploy Docs 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
