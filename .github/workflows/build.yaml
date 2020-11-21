@@ -61,4 +61,4 @@ jobs:
           repository: gosticks/octoprint-ts-client
           event-type: api-updated
           client-payload: |
-            {"ref": "${{ github.ref }}", "url": "${{ steps.upload-release-asset.outputs.browser_download_url }}", "sha": "${{ github.sha }}", "changelog": "${{ steps.create_release.outputs.body }}", "tag": "${{ steps.create_release.outputs.tag_name }}"}
+            {"ref": "${{ github.ref }}", "url": "${{ steps.upload-release-asset.outputs.browser_download_url }}", "sha": "${{ github.sha }}", "changelog": "${{ github.event }}", "tag": "${{ github.tag_name }}"}
