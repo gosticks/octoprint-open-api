@@ -50,7 +50,7 @@ jobs:
           asset_path: ./dist/api.yaml
           asset_name: api.yaml
           asset_content_type: application/text
-      - run: echo "${{ steps.upload-release-asset.browser_download_url }}"
+      - run: echo "${{ steps.upload-release-asset.outputs.browser_download_url }}"
       # Dispatch build actions
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
@@ -59,4 +59,4 @@ jobs:
           repository: gosticks/octoprint-ts-client
           event-type: api-updated
           client-payload: |
-            {"ref": "${{ github.ref }}", "url": "${{ steps.upload-release-asset.browser_download_url }}", "sha": "${{ github.sha }}", "changelog": "${{ steps.create_release.release.body }}", "tag": "${{ steps.create_release.release.tag_name }}"}
+            {"ref": "${{ github.ref }}", "url": "${{ steps.upload-release-asset.outputs.browser_download_url }}", "sha": "${{ github.sha }}", "changelog": "${{ steps.create_release.outputs.body }}", "tag": "${{ steps.create_release.outputs.tag_name }}"}
