@@ -9,7 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    needs: test
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
