@@ -28,7 +28,7 @@ info:
     - Push updates endpoint is missing
     - Auth header definitions are still missing
 
-  version: "0.8"
+  version: "v0.7.1-beta.1"
 
 tags:
   - name: General
