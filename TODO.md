@@ -3,6 +3,7 @@
 ## General
 
 - [ ] handle authorization header
+- [ ] update readme
 
 ## Routes
 
