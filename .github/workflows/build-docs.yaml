@@ -1,6 +1,8 @@
 name: Build Docs
 
 on:
+  release:
+    types: [published]
   # For this workflow, we're using the workflow_dispatch event which is triggered when the user clicks Run workflow in the GitHub Actions UI
   workflow_dispatch:
 
