@@ -50,6 +50,7 @@ jobs:
           asset_path: ./dist/api.yaml
           asset_name: api.yaml
           asset_content_type: application/text
+      - run: echo "${{ steps.upload-release-asset.browser_download_url }}"
       # Dispatch build actions
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
