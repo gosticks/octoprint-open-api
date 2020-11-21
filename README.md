@@ -1,4 +1,5 @@
-# OctoPrint OpenAPI Definition
+
+# OctoPrint OpenAPI Definition (BETA!!!)
 
 This project proved a unofficial OpenAPI specification for the popular open source 3D printer control software OctoPrint. The definitions are based on the currently available OctoPrint api documentation. 
 
