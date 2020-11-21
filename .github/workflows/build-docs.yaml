@@ -56,4 +56,4 @@ jobs:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: gosticks/octoprint-ts-client
           event-type: api-updated
-          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "changelog: "Test changelog", "tag": "0.1.0"}'
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "changelog": "Test changelog", "tag": "0.1.0"}'
