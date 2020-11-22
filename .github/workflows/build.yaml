@@ -54,8 +54,9 @@ jobs:
           asset_content_type: application/text
       # set tag
       - run: git describe --tags
-      - id: tag-setter
-        run: echo ::set-output name=tag_name::$(echo git describe --tags)
+      - name: Set tag value
+        run: |
+          echo ::set-env name=TAG_NAME::$(git describe --tags)
       # Dispatch build actions
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
@@ -64,4 +65,4 @@ jobs:
           repository: gosticks/octoprint-ts-client
           event-type: api-updated
           client-payload: |
-            {"ref": "${{ github.ref }}", "url": "${{ steps.upload-release-asset.outputs.browser_download_url }}", "sha": "${{ github.sha }}", "changelog": "${{ steps.tag-setter.tag_name }}", "tag": "${{ steps.tag-setter.tag_name }}"}
+            {"ref": "${{ github.ref }}", "url": "${{ steps.upload-release-asset.outputs.browser_download_url }}", "sha": "${{ github.sha }}", "changelog": "${{ steps.tag-setter.tag_name }}", "tag": "${{ env.TAG_NAME }}"}
