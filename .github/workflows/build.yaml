@@ -56,7 +56,7 @@ jobs:
       - run: git describe --tags
       - name: Set tag value
         run: |
-          echo ::set-output name=TAG_NAME::$(git describe --tags)
+          echo ::set-output name=TAG_NAME::$(echo "${{ github.ref }}" | sed -e "s/^refs\/tags\///")
         id: tags
       # Dispatch build actions
       - name: Repository Dispatch
