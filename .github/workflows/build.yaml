@@ -53,7 +53,8 @@ jobs:
           asset_name: api.yaml
           asset_content_type: application/text
       # set tag
-      - run: echo '::set-output name=tag_name::${git describe --tags}'
+      - id: tag-setter
+        run: echo '::set-output name=tag_name::${git describe --tags}'
       # Dispatch build actions
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
